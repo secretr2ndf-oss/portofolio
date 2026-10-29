@@ -1,0 +1,502 @@
+/* ========================================================
+   MODERN BENTO PORTFOLIO & BIO-LINK
+   Author: Randy Fadillah
+   Theme: Modern Dark Glassmorphism (Mobile & Bio-ready)
+   ======================================================== */
+
+:root {
+    --bg-main: #0b0f19;
+    --card-bg: rgba(22, 27, 46, 0.7);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-hover-border: rgba(99, 102, 241, 0.4);
+    
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --accent-blue: #38bdf8;
+    --accent-purple: #818cf8;
+    --accent-green: #34d399;
+    --accent-emerald: #10b981;
+    --accent-amber: #fbbf24;
+
+    --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: var(--font-family);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    padding: 40px 16px 60px;
+}
+
+/* Ambient Background Lights */
+.ambient-glow {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.25;
+}
+
+.glow-1 {
+    top: -50px;
+    left: -50px;
+    background: radial-gradient(circle, #6366f1, transparent);
+}
+
+.glow-2 {
+    bottom: 50px;
+    right: -50px;
+    background: radial-gradient(circle, #38bdf8, transparent);
+}
+
+/* Container Utama */
+.portfolio-container {
+    width: 100%;
+    max-width: 680px; /* Lebar ideal untuk tampilan mobile & desktop bio */
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================
+   HEADER / PROFIL
+   ========================================= */
+.profile-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.avatar-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.avatar-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.avatar-img:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-purple);
+}
+
+/* Status Badge "Available" */
+.status-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    background-color: var(--accent-emerald);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-emerald);
+}
+
+.profile-name {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+    background: linear-gradient(135deg, #ffffff 30%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-tagline {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-blue);
+    margin-bottom: 4px;
+}
+
+.profile-subtagline {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+/* Social Media Buttons */
+.social-bar {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.social-btn:hover {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: var(--accent-purple);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   BENTO GRID CARDS
+   ========================================= */
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+/* Desktop / Tablet: 2 kolom */
+@media (min-width: 600px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-featured, .card-wide {
+        grid-column: span 2;
+    }
+}
+
+.bento-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 22px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.bento-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--card-hover-border);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card-icon {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+/* Badge Kategori */
+.card-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--accent-purple);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.card-badge.work {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--accent-amber);
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+.card-badge.org {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+.card-badge.martial {
+    background: rgba(52, 211, 153, 0.15);
+    color: var(--accent-green);
+    border-color: rgba(52, 211, 153, 0.3);
+}
+
+.card-badge.skill {
+    position: static;
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 12px;
+}
+
+.bento-card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+
+.institution {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+
+.card-detail {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Sub-Role Pill (Asisten Lab) */
+.sub-role {
+    margin-top: 10px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.role-pill {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.2));
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.role-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Timeline Tags (GMBU) */
+.timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 3px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    color: var(--text-muted);
+}
+
+.active-tag {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-blue);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    font-weight: 600;
+}
+
+/* Pagar Nusa Position Highlight */
+.position-highlight {
+    background: rgba(16, 185, 129, 0.1);
+    border-left: 3px solid var(--accent-green);
+    padding: 10px 14px;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 12px;
+}
+
+.pos-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.pos-term {
+    font-size: 12px;
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+/* Skills Chips */
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.skill-chip {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--card-border);
+    border-radius: 30px;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+}
+
+.skill-chip:hover {
+    background: rgba(99, 102, 241, 0.25);
+    border-color: var(--accent-purple);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   CALL TO ACTION & FOOTER
+   ========================================= */
+.cta-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.primary-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(34, 197, 94, 0.45);
+    filter: brightness(1.05);
+}
+
+.secondary-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, rgba(225, 48, 108, 0.15), rgba(253, 29, 29, 0.15));
+    border: 1px solid rgba(225, 48, 108, 0.4);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 16px;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Experience Timeline List */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.exp-item {
+    border-left: 2px solid rgba(251, 191, 36, 0.4);
+    padding-left: 14px;
+    position: relative;
+}
+
+.exp-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-amber);
+    box-shadow: 0 0 8px rgba(251, 191, 36, 0.6);
+}
+
+.exp-role {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.exp-company {
+    font-size: 13px;
+    color: var(--accent-amber);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.secondary-btn:hover {
+    background: linear-gradient(135deg, #e1306c, #fd1d1d);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(225, 48, 108, 0.4);
+}
+
+.github-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 16px;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+}
+
+.github-btn:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(255, 255, 255, 0.15);
+}
+
+.footer-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 24px;
+}
+
