@@ -1,41 +1,111 @@
-/* ========================================================
-   PORTOFOLIO & PROFIL PROFESIONAL
+/* ==========================================================================
+   MUHAMAD RANDYFA AKBAR MAULANA - NEXT-GEN 2026 HYBRID PORTFOLIO
+   Theme: Professional High-Credibility + Monkey D. Luffy "Gear 5 (Sun God Nika)"
    Author: Muhamad Randyfa Akbar Maulana
-   Gaya: Modern Clean Editorial (Human-Crafted, Non-AI)
-   ======================================================== */
+   ========================================================================== */
 
+/* --------------------------------------------------------------------------
+   1. DESIGN SYSTEM VARIABLES (Default Professional Mode)
+   -------------------------------------------------------------------------- */
 :root {
-    /* Palet Warna Natural & Profesional (Bukan Dark Mode AI Template) */
-    --surface-bg: #f8fafc;
-    --card-bg: #ffffff;
-    --card-border: #e2e8f0;
-    --card-border-hover: #cbd5e1;
+    --bg-base: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #f1f5f9;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --border-hover: #cbd5e1;
 
-    --text-heading: #0f172a;
-    --text-body: #334155;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
     --text-muted: #64748b;
-    --text-light: #94a3b8;
+    --text-inverse: #ffffff;
 
-    /* Aksen Bersih & Otentik */
     --brand-navy: #1e3a8a;
     --brand-blue: #2563eb;
     --brand-blue-subtle: #eff6ff;
-    --status-green: #15803d;
-    --status-green-bg: #f0fdf4;
-    --tag-bg: #f1f5f9;
-    --tag-border: #e2e8f0;
+    --brand-blue-glow: rgba(37, 99, 235, 0.25);
+    
+    --accent-emerald: #16a34a;
+    --accent-emerald-bg: #f0fdf4;
+    --accent-amber: #d97706;
+    --accent-amber-bg: #fffbeb;
+    --accent-purple: #7c3aed;
 
-    --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Toon / Rubber Physics Easing */
+    --ease-rubber: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+
     --radius-sm: 8px;
     --radius-md: 12px;
-    --radius-lg: 16px;
+    --radius-lg: 18px;
+    --radius-xl: 24px;
     --radius-full: 9999px;
 
-    --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
-    --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+    --shadow-soft: 0 4px 12px rgba(15, 23, 42, 0.05);
+    --shadow-hover: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
+    --shadow-pop: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+
+    --avatar-ring-color: #ffffff;
+    --avatar-ring-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
 }
 
+/* --------------------------------------------------------------------------
+   2. MONKEY D. LUFFY "GEAR 5 / SUN GOD NIKA" AWAKENING THEME
+   -------------------------------------------------------------------------- */
+body.gear5-mode {
+    --bg-base: #fdfbf7;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #faf5ff;
+    --bg-card: rgba(255, 255, 255, 0.94);
+    --border-color: #f3e8ff;
+    --border-hover: #c084fc;
+
+    --text-primary: #180928;
+    --text-secondary: #4c1d95;
+    --text-muted: #7c3aed;
+    --text-inverse: #ffffff;
+
+    --brand-navy: #6b21a8;
+    --brand-blue: #9333ea;
+    --brand-blue-subtle: #faf5ff;
+    --brand-blue-glow: rgba(168, 85, 247, 0.35);
+
+    --accent-emerald: #059669;
+    --accent-amber: #eab308;
+    
+    --shadow-soft: 0 8px 20px rgba(147, 51, 234, 0.08);
+    --shadow-hover: 0 16px 30px -4px rgba(147, 51, 234, 0.18), 0 0 15px rgba(250, 204, 21, 0.25);
+    --shadow-pop: 0 24px 38px -5px rgba(147, 51, 234, 0.25), 0 0 30px rgba(168, 85, 247, 0.2);
+
+    --avatar-ring-color: #ffffff;
+    --avatar-ring-shadow: 0 0 30px rgba(168, 85, 247, 0.5), 0 0 50px rgba(250, 204, 21, 0.35);
+}
+
+/* Gear 5 Background Atmosphere */
+body.gear5-mode::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(216, 180, 254, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(254, 240, 138, 0.25) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(243, 232, 255, 0.3) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+    animation: nikaAuraDrift 8s ease-in-out infinite alternate;
+}
+
+@keyframes nikaAuraDrift {
+    0% { transform: scale(1) translateY(0); filter: hue-rotate(0deg); }
+    100% { transform: scale(1.05) translateY(-10px); filter: hue-rotate(15deg); }
+}
+
+/* --------------------------------------------------------------------------
+   3. BASE RESET & TYPOGRAPHY
+   -------------------------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -47,340 +117,528 @@ html {
 }
 
 body {
-    background-color: var(--surface-bg);
-    font-family: var(--font-family);
-    color: var(--text-body);
+    background-color: var(--bg-base);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-secondary);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    padding: 32px 16px 56px;
+    padding: 24px 16px 120px;
     display: flex;
     justify-content: center;
+    position: relative;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Pembungkus Halaman Utama */
 .page-wrapper {
     width: 100%;
-    max-width: 760px;
+    max-width: 820px;
+    position: relative;
+    z-index: 1;
 }
 
-/* =========================================
-   HEADER PROFIL
-   ========================================= */
+/* Rubber / Toon Physics Interaction Class */
+.rubber-interact {
+    transition: transform 0.35s var(--ease-rubber), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.rubber-interact:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+.rubber-interact:active {
+    transform: translateY(2px) scale(0.97);
+}
+
+body.gear5-mode .rubber-interact:hover {
+    transform: translateY(-6px) scale(1.035) rotate(-0.5deg);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-hover);
+}
+
+body.gear5-mode .rubber-interact:active {
+    transform: translateY(2px) scale(0.95) rotate(1deg);
+}
+
+/* --------------------------------------------------------------------------
+   4. HEADER & PROFILE HERO
+   -------------------------------------------------------------------------- */
 .profile-hero {
-    background-color: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: var(--radius-lg);
-    padding: 28px 24px;
-    margin-bottom: 20px;
-    box-shadow: var(--shadow-sm);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 32px 28px 24px;
+    margin-bottom: 22px;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
 }
 
-.profile-header-main {
+/* Manga Sound Effect Watermark (Gear 5 Only) */
+.manga-sound-fx {
+    display: none;
+    position: absolute;
+    font-size: 58px;
+    font-weight: 900;
+    font-style: italic;
+    color: rgba(147, 51, 234, 0.08);
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: -2px;
+    z-index: 0;
+}
+
+.manga-sound-fx.top-right {
+    top: 10px;
+    right: 20px;
+    transform: rotate(12deg);
+}
+
+.manga-sound-fx.bottom-left {
+    bottom: -10px;
+    left: 20px;
+    transform: rotate(-8deg);
+}
+
+body.gear5-mode .manga-sound-fx {
+    display: block;
+    animation: soundFxPulse 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes soundFxPulse {
+    0% { opacity: 0.06; transform: scale(1) rotate(12deg); }
+    100% { opacity: 0.14; transform: scale(1.08) rotate(15deg); }
+}
+
+.hero-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Drums of Liberation Status Pill */
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--accent-emerald-bg);
+    border: 1px solid #bbf7d0;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-emerald);
+    border-radius: var(--radius-full);
+}
+
+/* "Drums of Liberation" Heartbeat Rhythm on Dot */
+body.gear5-mode .status-pill {
+    background-color: #faf5ff;
+    border-color: #d8b4fe;
+}
+
+body.gear5-mode .status-dot {
+    background-color: #a855f7;
+    animation: drumsOfLiberation 1.15s infinite;
+}
+
+@keyframes drumsOfLiberation {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(168, 85, 247, 0); }
+    15% { transform: scale(1.4); box-shadow: 0 0 10px rgba(168, 85, 247, 0.8); }
+    30% { transform: scale(1); box-shadow: 0 0 0 rgba(168, 85, 247, 0); }
+    45% { transform: scale(1.3); box-shadow: 0 0 8px rgba(250, 204, 21, 0.8); }
+    60% { transform: scale(1); box-shadow: 0 0 0 rgba(168, 85, 247, 0); }
+}
+
+.status-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-emerald);
+}
+
+body.gear5-mode .status-text {
+    color: #7e22ce;
+}
+
+/* Awakening Mode Toggle Button */
+.awakening-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-primary);
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s var(--ease-rubber);
+}
+
+.awakening-toggle-btn:hover {
+    border-color: #a855f7;
+    color: #7e22ce;
+    transform: scale(1.05);
+}
+
+body.gear5-mode .awakening-toggle-btn {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    border-color: #7e22ce;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.5);
+}
+
+.profile-main-layout {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 18px;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
 }
 
-@media (min-width: 600px) {
-    .profile-header-main {
+@media (min-width: 620px) {
+    .profile-main-layout {
         flex-direction: row;
         text-align: left;
         align-items: center;
-        gap: 24px;
     }
 }
 
-.avatar-container {
+/* Avatar Wrapper with Nika Floating Cloud & Haki Sparks */
+.avatar-stage {
+    position: relative;
     flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.profile-avatar {
-    width: 116px;
-    height: 116px;
+/* Nika Cloud Scarf (Hagoromo) SVG Layer */
+.nika-cloud-ring {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.8) rotate(0deg);
+    transition: opacity 0.5s ease, transform 0.6s var(--ease-rubber);
+    z-index: 2;
+}
+
+body.gear5-mode .nika-cloud-ring,
+.avatar-stage:hover .nika-cloud-ring {
+    opacity: 1;
+    transform: scale(1.05) rotate(360deg);
+    animation: nikaCloudSpin 16s linear infinite;
+}
+
+@keyframes nikaCloudSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.profile-photo {
+    width: 124px;
+    height: 124px;
     border-radius: var(--radius-full);
     object-fit: cover;
     object-position: center 20%;
-    border: 3px solid #ffffff;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
-    outline: 1px solid var(--card-border);
+    border: 3.5px solid var(--avatar-ring-color);
+    box-shadow: var(--avatar-ring-shadow);
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s var(--ease-rubber);
 }
 
-.profile-identity {
+.avatar-stage:hover .profile-photo {
+    transform: scale(1.06) rotate(-2deg);
+}
+
+/* Conqueror Haki Spark Elements */
+.haki-spark {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #facc15;
+    border-radius: 50%;
+    filter: blur(1px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+
+body.gear5-mode .haki-spark-1 {
+    top: 15px; right: 10px;
+    box-shadow: 0 0 12px #a855f7, 0 0 20px #facc15;
+    animation: sparkFlash 2s infinite 0.2s;
+}
+
+body.gear5-mode .haki-spark-2 {
+    bottom: 20px; left: 10px;
+    box-shadow: 0 0 12px #ec4899, 0 0 20px #facc15;
+    animation: sparkFlash 2.4s infinite 0.9s;
+}
+
+@keyframes sparkFlash {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.4); }
+}
+
+.profile-info {
     flex: 1;
 }
 
-.status-indicator {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    background-color: var(--status-green-bg);
-    border: 1px solid #bbf7d0;
-    padding: 4px 11px;
-    border-radius: var(--radius-full);
-    margin-bottom: 10px;
-}
-
-.status-dot {
-    width: 7px;
-    height: 7px;
-    background-color: var(--status-green);
-    border-radius: var(--radius-full);
-}
-
-.status-text {
-    font-size: 11.5px;
-    font-weight: 600;
-    color: var(--status-green);
-}
-
-.profile-name {
-    font-size: 23px;
+.profile-title {
+    font-size: 25px;
     font-weight: 800;
-    color: var(--text-heading);
+    color: var(--text-primary);
     letter-spacing: -0.4px;
     line-height: 1.25;
     margin-bottom: 6px;
 }
 
-.profile-role {
-    font-size: 14px;
-    font-weight: 600;
+body.gear5-mode .profile-title {
+    background: linear-gradient(135deg, #180928 20%, #7c3aed 70%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-headline {
+    font-size: 14.5px;
+    font-weight: 700;
     color: var(--brand-navy);
     margin-bottom: 4px;
 }
 
-.profile-institution {
-    font-size: 12.5px;
+.profile-campus {
+    font-size: 13px;
     color: var(--text-muted);
 }
 
-/* Strip Kontak & Sosial Media */
-.contact-strip {
+/* Contact Strip */
+.contact-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 9px;
-    margin-top: 22px;
-    padding-top: 18px;
-    border-top: 1px solid var(--card-border);
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+    z-index: 1;
 }
 
-.strip-link {
+.action-pill {
     display: inline-flex;
     align-items: center;
     gap: 7px;
     font-size: 12.5px;
-    font-weight: 600;
-    color: var(--text-body);
-    background-color: var(--tag-bg);
-    border: 1px solid var(--tag-border);
-    padding: 7px 14px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    padding: 8px 14px;
     border-radius: var(--radius-md);
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
 }
 
-.strip-link:hover {
-    background-color: #e2e8f0;
-    border-color: #cbd5e1;
-    color: var(--text-heading);
-    transform: translateY(-1px);
-}
-
-.strip-link.primary-link {
+.action-pill.primary-wa {
     background-color: #16a34a;
     border-color: #15803d;
     color: #ffffff;
 }
 
-.strip-link.primary-link:hover {
+.action-pill.primary-wa:hover {
     background-color: #15803d;
-    border-color: #166534;
-    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
 }
 
-.print-button {
+.action-pill.copy-btn {
     font-family: inherit;
 }
 
-/* =========================================
-   KARTU RINGKASAN
-   ========================================= */
-.summary-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--card-border);
+/* --------------------------------------------------------------------------
+   5. QUICK STATS (ANIMATED COUNTERS)
+   -------------------------------------------------------------------------- */
+.stats-grid-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+@media (min-width: 600px) {
+    .stats-grid-row {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.stat-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    padding: 20px 24px;
-    margin-bottom: 20px;
-    box-shadow: var(--shadow-sm);
+    padding: 16px 14px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
 }
 
-.summary-text {
-    font-size: 13.5px;
-    color: var(--text-body);
-    line-height: 1.65;
-}
-
-/* =========================================
-   KONTEN UTAMA
-   ========================================= */
-.content-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.content-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: var(--radius-lg);
-    padding: 24px;
-    box-shadow: var(--shadow-sm);
-    transition: border-color 0.2s ease;
-}
-
-.content-card:hover {
-    border-color: var(--card-border-hover);
-}
-
-.card-header-clean {
-    margin-bottom: 18px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #f1f5f9;
-}
-
-.card-kicker {
+.stat-value {
     display: block;
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--brand-blue);
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-}
-
-.card-title {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--text-heading);
-    letter-spacing: -0.2px;
-}
-
-/* Tipografi Bersama untuk Peran */
-.role-heading {
-    font-size: 14.5px;
-    font-weight: 700;
-    color: var(--text-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--brand-navy);
+    letter-spacing: -0.3px;
     margin-bottom: 2px;
 }
 
-.role-place {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text-muted);
-    margin-bottom: 6px;
+body.gear5-mode .stat-value {
+    color: #9333ea;
 }
 
-.role-desc {
-    font-size: 13px;
-    color: var(--text-body);
-    line-height: 1.6;
-}
-
-/* =========================================
-   1. PENDIDIKAN & TIMELINE
-   ========================================= */
-.timeline-group {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.timeline-row {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding-bottom: 16px;
-    border-bottom: 1px dashed #e2e8f0;
-}
-
-.timeline-row:last-child {
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-@media (min-width: 580px) {
-    .timeline-row {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 20px;
-    }
-    .timeline-meta {
-        width: 140px;
-        flex-shrink: 0;
-    }
-    .timeline-body {
-        flex: 1;
-    }
-}
-
-.timeline-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px;
-}
-
-.meta-year {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text-heading);
-}
-
-.meta-tag {
-    font-size: 10.5px;
+.stat-label {
+    font-size: 11.5px;
     font-weight: 600;
-    padding: 2px 7px;
-    border-radius: var(--radius-sm);
+    color: var(--text-muted);
 }
 
-.meta-tag.blue {
-    background-color: var(--brand-blue-subtle);
-    color: var(--brand-blue);
-    border: 1px solid #dbeafe;
+/* --------------------------------------------------------------------------
+   6. FILTER TABS (All, Projects & IT, Career, Organization)
+   -------------------------------------------------------------------------- */
+.filter-tabs-bar {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    margin-bottom: 22px;
+    scrollbar-width: none;
 }
 
-.meta-tag.dark {
-    background-color: #f1f5f9;
-    color: var(--text-body);
-    border: 1px solid #e2e8f0;
+.filter-tabs-bar::-webkit-scrollbar {
+    display: none;
 }
 
-/* =========================================
-   2. PROYEK & KARYA
-   ========================================= */
-.project-grid {
+.tab-btn {
+    flex-shrink: 0;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.25s var(--ease-rubber);
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--brand-blue);
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    background-color: var(--brand-navy);
+    border-color: var(--brand-navy);
+    color: #ffffff;
+    box-shadow: 0 4px 12px var(--brand-blue-glow);
+}
+
+body.gear5-mode .tab-btn.active {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    border-color: #6b21a8;
+    box-shadow: 0 4px 14px rgba(168, 85, 247, 0.45);
+}
+
+/* --------------------------------------------------------------------------
+   7. BENTO GRID & CONTENT CARDS
+   -------------------------------------------------------------------------- */
+.bento-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 22px;
 }
 
-.project-box {
-    background-color: #fafbfc;
-    border: 1px solid #edf2f7;
-    border-radius: var(--radius-md);
-    padding: 16px;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+.bento-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 26px;
+    box-shadow: var(--shadow-soft);
 }
 
-.project-box:hover {
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-kicker {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-blue);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+body.gear5-mode .card-kicker {
+    color: #9333ea;
+}
+
+.card-title {
+    font-size: 17.5px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.2px;
+}
+
+/* --------------------------------------------------------------------------
+   8. FEATURED PROJECTS (Clickable for Modal)
+   -------------------------------------------------------------------------- */
+.projects-deck {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.project-card {
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+}
+
+.project-card:hover {
     background-color: #ffffff;
-    border-color: #cbd5e1;
+    border-color: var(--brand-blue);
 }
 
-.project-top {
+body.gear5-mode .project-card:hover {
+    border-color: #a855f7;
+    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.15);
+}
+
+.project-top-meta {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -389,249 +647,721 @@ body {
     margin-bottom: 8px;
 }
 
-.project-name {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text-heading);
+.project-heading {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text-primary);
 }
 
-.badge-chip {
+.project-badge {
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--brand-blue);
-    background-color: #eff6ff;
-    border: 1px solid #dbeafe;
-    padding: 2px 8px;
-    border-radius: var(--radius-sm);
-}
-
-.project-desc {
-    font-size: 12.5px;
-    color: var(--text-body);
-    line-height: 1.6;
-}
-
-/* =========================================
-   3. PENGALAMAN KERJA & BISNIS
-   ========================================= */
-.work-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.work-item {
-    padding-bottom: 16px;
-    border-bottom: 1px dashed #e2e8f0;
-}
-
-.work-item:last-child {
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.work-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 6px;
-}
-
-.date-badge {
-    font-size: 11.5px;
-    font-weight: 600;
-    color: var(--text-muted);
-    background-color: #f1f5f9;
+    background-color: var(--brand-blue-subtle);
+    border: 1px solid #bfdbfe;
     padding: 3px 9px;
     border-radius: var(--radius-sm);
-    border: 1px solid #e2e8f0;
 }
 
-.work-jobdesc {
+body.gear5-mode .project-badge {
+    color: #7e22ce;
+    background-color: #faf5ff;
+    border-color: #e9d5ff;
+}
+
+.project-snippet {
     font-size: 13px;
-    color: var(--text-body);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.click-hint {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--brand-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+body.gear5-mode .click-hint {
+    color: #9333ea;
+}
+
+/* --------------------------------------------------------------------------
+   9. INTERACTIVE JOURNEY TIMELINE (2018 - 2030)
+   -------------------------------------------------------------------------- */
+.timeline-wrapper {
+    position: relative;
+    padding-left: 28px;
+    margin-top: 10px;
+}
+
+/* Animated Progress Connector Line */
+.timeline-track-line {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 8px;
+    width: 3px;
+    background: #e2e8f0;
+    border-radius: var(--radius-full);
+}
+
+body.gear5-mode .timeline-track-line {
+    background: linear-gradient(to bottom, #d8b4fe, #facc15, #a855f7);
+}
+
+.timeline-entry {
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.timeline-entry:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline Glowing Node */
+.timeline-node-dot {
+    position: absolute;
+    left: -28px;
+    top: 6px;
+    width: 19px;
+    height: 19px;
+    background-color: #ffffff;
+    border: 3.5px solid var(--brand-blue);
+    border-radius: var(--radius-full);
+    box-shadow: 0 0 0 4px var(--brand-blue-subtle);
+    transition: all 0.3s var(--ease-rubber);
+    z-index: 1;
+}
+
+.timeline-entry.active-node .timeline-node-dot,
+.timeline-entry:hover .timeline-node-dot {
+    transform: scale(1.25);
+    background-color: var(--brand-blue);
+    border-color: #ffffff;
+    box-shadow: 0 0 14px var(--brand-blue-glow);
+}
+
+body.gear5-mode .timeline-node-dot {
+    border-color: #9333ea;
+    box-shadow: 0 0 0 4px #faf5ff;
+}
+
+body.gear5-mode .timeline-entry.active-node .timeline-node-dot {
+    background-color: #facc15;
+    border-color: #7e22ce;
+    box-shadow: 0 0 14px rgba(250, 204, 21, 0.8);
+    animation: drumsOfLiberation 1.15s infinite;
+}
+
+.timeline-content-card {
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+}
+
+.timeline-content-card:hover {
+    border-color: var(--brand-blue);
+    background-color: #ffffff;
+}
+
+body.gear5-mode .timeline-content-card:hover {
+    border-color: #a855f7;
+}
+
+.timeline-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.timeline-role {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.timeline-year {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 9px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    color: var(--brand-navy);
+}
+
+body.gear5-mode .timeline-year {
+    color: #7e22ce;
+    border-color: #d8b4fe;
+}
+
+.timeline-org {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.timeline-desc {
+    font-size: 12.5px;
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
-.work-jobdesc strong {
-    color: var(--text-heading);
-    font-weight: 600;
-}
-
-/* =========================================
-   4. ORGANISASI & KEPEMIMPINAN
-   ========================================= */
-.org-layout {
+/* --------------------------------------------------------------------------
+   10. CREDENTIALS & SKILLS
+   -------------------------------------------------------------------------- */
+.credential-stack {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 12px;
 }
 
-.org-entry {
-    padding-bottom: 16px;
-    border-bottom: 1px dashed #e2e8f0;
-}
-
-.org-entry:last-child {
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.org-entry-header {
+.credential-item {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 8px;
+    gap: 12px;
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+}
+
+.cred-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.cred-text h4 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-primary);
     margin-bottom: 2px;
 }
 
-.org-period {
-    font-size: 11.5px;
-    font-weight: 600;
+.cred-text p {
+    font-size: 12px;
     color: var(--text-muted);
-    background-color: #f1f5f9;
-    padding: 2px 8px;
-    border-radius: var(--radius-sm);
 }
 
-.org-period.highlight {
-    background-color: #fef3c7;
-    color: #92400e;
-    border: 1px solid #fde68a;
-}
-
-/* =========================================
-   5. KEAHLIAN & KOMPETENSI
-   ========================================= */
-.skills-categorized {
+/* Skills Deck */
+.skills-grouped {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.skill-category {
-    padding-bottom: 14px;
-    border-bottom: 1px solid #f1f5f9;
-}
-
-.skill-category:last-child {
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.category-title {
-    font-size: 12px;
-    font-weight: 700;
+.skill-cluster-title {
+    font-size: 11.5px;
+    font-weight: 800;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-.pill-wrap {
+.chips-wrap {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.skill-tag {
+.skill-pill {
     font-size: 12px;
-    font-weight: 500;
-    color: var(--text-heading);
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    padding: 5px 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    padding: 6px 13px;
     border-radius: var(--radius-md);
-    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.skill-tag:hover {
+.skill-pill:hover {
     background-color: #ffffff;
-    border-color: #cbd5e1;
+    border-color: var(--brand-blue);
 }
 
-/* =========================================
-   FOOTER CTA
-   ========================================= */
-.footer-cta {
-    background-color: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: var(--radius-lg);
-    padding: 28px 24px;
-    margin-top: 20px;
-    text-align: center;
-    box-shadow: var(--shadow-sm);
+body.gear5-mode .skill-pill:hover {
+    border-color: #a855f7;
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
 }
 
-.footer-heading {
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--text-heading);
-    margin-bottom: 6px;
-}
-
-.footer-subtext {
-    font-size: 13px;
-    color: var(--text-muted);
-    max-width: 500px;
-    margin: 0 auto 20px;
-}
-
-.footer-action-row {
+/* --------------------------------------------------------------------------
+   11. PROJECT DETAILS MODAL
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 24px;
-}
-
-.cta-btn {
-    display: inline-flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-box {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    width: 100%;
+    max-width: 580px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 28px;
+    box-shadow: var(--shadow-pop);
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.4s var(--ease-rubber);
+    position: relative;
+}
+
+.modal-overlay.active .modal-box {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    background: #e2e8f0;
+    color: var(--text-primary);
+    transform: scale(1.1);
+}
+
+.modal-header {
+    margin-bottom: 16px;
+    padding-right: 40px;
+}
+
+.modal-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-blue);
+    background-color: var(--brand-blue-subtle);
+    padding: 3px 9px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.modal-body {
     font-size: 13.5px;
-    font-weight: 700;
-    padding: 10px 22px;
-    border-radius: var(--radius-md);
-    text-decoration: none;
-    transition: transform 0.15s ease, background-color 0.2s ease;
+    color: var(--text-secondary);
+    line-height: 1.7;
 }
 
-.cta-btn.primary {
-    background-color: #16a34a;
+.modal-body p {
+    margin-bottom: 14px;
+}
+
+.modal-stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* --------------------------------------------------------------------------
+   12. SMART MINI CHATBOT WIDGET ("TANYA RANDYFA AI")
+   -------------------------------------------------------------------------- */
+.chatbot-trigger-btn {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    background: #0f172a;
     color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 18px;
+    border-radius: var(--radius-full);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 800;
+    z-index: 990;
+    transition: all 0.3s var(--ease-rubber);
 }
 
-.cta-btn.primary:hover {
-    background-color: #15803d;
-    transform: translateY(-1px);
+.chatbot-trigger-btn:hover {
+    transform: scale(1.06) translateY(-2px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.35);
 }
 
-.cta-btn.secondary {
-    background-color: #ffffff;
-    color: var(--text-heading);
-    border: 1px solid var(--card-border);
+body.gear5-mode .chatbot-trigger-btn {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.45);
 }
 
-.cta-btn.secondary:hover {
-    background-color: #f8fafc;
-    border-color: #cbd5e1;
-    transform: translateY(-1px);
+.chat-avatar-mini {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
 }
 
-.footer-bottom {
-    padding-top: 18px;
-    border-top: 1px solid #f1f5f9;
-    font-size: 11.5px;
-    color: var(--text-light);
+.chat-unread-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    animation: pulseGlow 1.5s infinite;
 }
 
-/* =========================================
-   PRINT / PDF EXPORT STYLESHEET
-   ========================================= */
+@keyframes pulseGlow {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+/* Chatbot Floating Window */
+.chatbot-card-window {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    width: 360px;
+    max-width: calc(100vw - 32px);
+    height: 520px;
+    max-height: calc(100vh - 120px);
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-pop);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 995;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.9) translateY(20px);
+    transition: all 0.35s var(--ease-rubber);
+}
+
+.chatbot-card-window.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0);
+}
+
+.chat-header {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body.gear5-mode .chat-header {
+    background: linear-gradient(135deg, #6b21a8, #9333ea);
+}
+
+.chat-header-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-header-name {
+    font-size: 13.5px;
+    font-weight: 800;
+}
+
+.chat-header-status {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.chat-close-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.chat-close-btn:hover {
+    opacity: 1;
+}
+
+/* Messages History Area */
+.chat-messages-area {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #f8fafc;
+}
+
+.chat-bubble {
+    max-width: 84%;
+    padding: 10px 14px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    border-radius: 16px;
+    animation: bubblePop 0.3s var(--ease-rubber);
+}
+
+@keyframes bubblePop {
+    from { opacity: 0; transform: scale(0.9) translateY(6px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.chat-bubble.bot {
+    align-self: flex-start;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-bottom-left-radius: 4px;
+}
+
+.chat-bubble.user {
+    align-self: flex-end;
+    background: var(--brand-navy);
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+}
+
+body.gear5-mode .chat-bubble.user {
+    background: #7e22ce;
+}
+
+/* Typing Indicator Animation */
+.typing-dots {
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px 8px;
+}
+
+.typing-dots span {
+    width: 6px;
+    height: 6px;
+    background: #94a3b8;
+    border-radius: 50%;
+    animation: typingBlink 1.4s infinite;
+}
+
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingBlink {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-4px); opacity: 1; }
+}
+
+/* Quick Replies Suggestions Bar */
+.chat-quick-replies {
+    padding: 8px 12px;
+    background: #ffffff;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.chat-quick-replies::-webkit-scrollbar {
+    display: none;
+}
+
+.chip-btn {
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 10px;
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    font-family: inherit;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+
+.chip-btn:hover {
+    background: var(--brand-blue-subtle);
+    border-color: var(--brand-blue);
+    color: var(--brand-blue);
+}
+
+/* Chat Input Bar */
+.chat-input-bar {
+    padding: 10px 14px;
+    background: #ffffff;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 8px;
+}
+
+.chat-text-input {
+    flex: 1;
+    font-family: inherit;
+    font-size: 12.5px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    outline: none;
+}
+
+.chat-text-input:focus {
+    border-color: var(--brand-blue);
+}
+
+.chat-send-btn {
+    width: 34px;
+    height: 34px;
+    background: var(--brand-navy);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.chat-send-btn:hover {
+    transform: scale(1.1);
+}
+
+body.gear5-mode .chat-send-btn {
+    background: #7e22ce;
+}
+
+/* --------------------------------------------------------------------------
+   13. FLOATING BOTTOM NAVIGATION DOCK
+   -------------------------------------------------------------------------- */
+.floating-dock-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-full);
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.35);
+    z-index: 980;
+}
+
+body.gear5-mode .floating-dock-nav {
+    background: rgba(30, 10, 50, 0.85);
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 12px 32px rgba(147, 51, 234, 0.4);
+}
+
+.dock-item {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: var(--radius-full);
+    transition: all 0.2s ease;
+}
+
+.dock-item:hover, .dock-item.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.dock-gear5-btn {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    color: #ffffff !important;
+    border-radius: var(--radius-full);
+    padding: 6px 12px;
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   14. TOAST NOTIFICATION
+   -------------------------------------------------------------------------- */
+.toast-msg {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-30px);
+    background: #0f172a;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: var(--radius-full);
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: var(--shadow-pop);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99999;
+    transition: all 0.3s var(--ease-rubber);
+}
+
+.toast-msg.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   15. PRINT STYLESHEET (CLEAN FORMAL RESUME)
+   -------------------------------------------------------------------------- */
 @media print {
     body {
         background-color: #ffffff !important;
@@ -641,17 +1371,20 @@ body {
     .page-wrapper {
         max-width: 100% !important;
     }
-    .profile-hero, .summary-card, .content-card, .footer-cta {
-        border: 1px solid #e2e8f0 !important;
-        box-shadow: none !important;
-        break-inside: avoid;
-        margin-bottom: 14px !important;
-        padding: 16px !important;
-    }
-    .contact-strip, .footer-action-row {
+    .hero-top-bar,
+    .contact-actions,
+    .filter-tabs-bar,
+    .floating-dock-nav,
+    .chatbot-trigger-btn,
+    .chatbot-card-window,
+    .manga-sound-fx,
+    .nika-cloud-ring,
+    .haki-spark {
         display: none !important;
     }
-    .profile-avatar {
+    .profile-hero, .bento-card, .timeline-content-card {
+        border: 1px solid #cbd5e1 !important;
         box-shadow: none !important;
+        break-inside: avoid;
     }
 }

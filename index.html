@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhamad Randyfa Akbar Maulana | Portofolio & Profil</title>
+    <title>Muhamad Randyfa Akbar Maulana | Next-Gen Portfolio & CV</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="fotoprofilsaya.jpeg">
@@ -11,56 +11,108 @@
     <!-- Meta Tag SEO & Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://randyfa-portofolio.netlify.app/">
-    <meta property="og:title" content="Muhamad Randyfa Akbar Maulana | Portofolio & CV">
-    <meta property="og:description" content="Mahasiswa Sistem Informasi ITATS, Asisten Laboratorium 2026, Sekretaris PAC Pagar Nusa, dan Profesional Quality Control.">
+    <meta property="og:title" content="Muhamad Randyfa Akbar Maulana | Portfolio & CV (Next-Gen 2026)">
+    <meta property="og:description" content="Mahasiswa Sistem Informasi ITATS, Asisten Lab, Sekretaris PAC Pagar Nusa, dan Profesional QC & Customer Service.">
     <meta property="og:image" content="https://randyfa-portofolio.netlify.app/fotoprofilsaya.jpeg">
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Muhamad Randyfa Akbar Maulana | Portofolio & CV">
+    <meta name="twitter:title" content="Muhamad Randyfa Akbar Maulana | Portfolio & CV">
     <meta name="twitter:description" content="Mahasiswa Sistem Informasi ITATS • Asisten Lab • Leader">
     <meta name="twitter:image" content="https://randyfa-portofolio.netlify.app/fotoprofilsaya.jpeg">
 
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- File CSS Eksternal -->
     <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
 
-    <main class="page-wrapper">
+    <!-- TOAST NOTIFICATION -->
+    <div id="toastNotification" class="toast-msg">Nomor WhatsApp berhasil disalin!</div>
+
+    <main class="page-wrapper" id="home">
         
-        <!-- HEADER PROFIL -->
+        <!-- HEADER / PROFILE HERO -->
         <header class="profile-hero">
-            <div class="profile-header-main">
-                <div class="avatar-container">
-                    <img src="fotoprofilsaya.jpeg" alt="Foto Resmi Muhamad Randyfa Akbar Maulana" class="profile-avatar">
+            <!-- Manga Watermarks (Gear 5 Awakened Mode Only) -->
+            <div class="manga-sound-fx top-right">DOOM!!</div>
+            <div class="manga-sound-fx bottom-left">JOYBOY</div>
+
+            <!-- Top Utility Bar: Status & Gear 5 Awakening Toggle -->
+            <div class="hero-top-bar">
+                <div class="status-pill rubber-interact">
+                    <span class="status-dot"></span>
+                    <span class="status-text" id="statusText">Drums of Liberation • Available</span>
                 </div>
 
-                <div class="profile-identity">
-                    <div class="status-indicator">
-                        <span class="status-dot"></span>
-                        <span class="status-text">Mahasiswa Aktif & Terbuka untuk Kolaborasi</span>
-                    </div>
-                    <h1 class="profile-name">Muhamad Randyfa Akbar Maulana</h1>
-                    <p class="profile-role">Mahasiswa Sistem Informasi • Asisten Laboratorium • Sekretaris PAC</p>
-                    <p class="profile-institution">Institut Teknologi Adhi Tama Surabaya (ITATS) • Surabaya, Indonesia</p>
+                <button id="gear5ToggleBtn" class="awakening-toggle-btn rubber-interact" title="Toggle Monkey D. Luffy Gear 5 Awakening Mode">
+                    <span class="gear5-icon">⚡</span>
+                    <span class="gear5-text">Gear 5 Mode</span>
+                </button>
+            </div>
+
+            <!-- Main Identity Layout -->
+            <div class="profile-main-layout">
+                <!-- Avatar Stage with Nika Hagoromo Cloud & Haki Sparks -->
+                <div class="avatar-stage">
+                    <!-- Nika Cloud Scarf (SVG Hagoromo Ring) -->
+                    <svg class="nika-cloud-ring" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="100" r="82" stroke="url(#nikaGradient)" stroke-width="6" stroke-dasharray="14 10" stroke-linecap="round"/>
+                        <path d="M40 70C25 50 45 20 75 35C90 15 125 15 140 35C165 20 185 50 170 70C190 95 180 135 155 145C165 175 130 195 105 180C80 195 45 175 55 145C30 135 20 95 40 70Z" 
+                              fill="url(#cloudGlow)" opacity="0.45" filter="blur(4px)"/>
+                        <defs>
+                            <linearGradient id="nikaGradient" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#ffffff"/>
+                                <stop offset="30%" stop-color="#facc15"/>
+                                <stop offset="70%" stop-color="#c084fc"/>
+                                <stop offset="100%" stop-color="#ec4899"/>
+                            </linearGradient>
+                            <radialGradient id="cloudGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(100 100) scale(90)">
+                                <stop offset="0%" stop-color="#ffffff"/>
+                                <stop offset="60%" stop-color="#e9d5ff"/>
+                                <stop offset="100%" stop-color="#fef08a" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+
+                    <!-- Haki Conqueror Sparks -->
+                    <span class="haki-spark haki-spark-1"></span>
+                    <span class="haki-spark haki-spark-2"></span>
+
+                    <!-- Profile Image with Fallback -->
+                    <img src="fotoprofilsaya.jpeg" onerror="this.onerror=null; this.src='profile.jpg';" alt="Foto Muhamad Randyfa Akbar Maulana" class="profile-photo">
+                </div>
+
+                <div class="profile-info">
+                    <h1 class="profile-title">Muhamad Randyfa Akbar Maulana</h1>
+                    <p class="profile-headline">Mahasiswa Sistem Informasi • Asisten Lab • Sekretaris PAC</p>
+                    <p class="profile-campus">Institut Teknologi Adhi Tama Surabaya (ITATS) • Surabaya, Jawa Timur</p>
                 </div>
             </div>
 
-            <!-- TAUTAN SOSIAL MEDIA & KONTAK CEPAT -->
-            <div class="contact-strip">
-                <a href="https://wa.me/62882010519801?text=Halo%20Randyfa,%20saya%20melihat%20portofolio%20Anda%20dan%20tertarik%20untuk%20berdiskusi%20lebih%20lanjut." target="_blank" class="strip-link primary-link" title="Hubungi melalui WhatsApp">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Contact Actions Strip -->
+            <div class="contact-actions">
+                <a href="https://wa.me/62882010519801?text=Halo%20Randyfa,%20saya%20melihat%20portofolio%20Anda%20dan%20tertarik%20untuk%20berdiskusi%20lebih%20lanjut." target="_blank" class="action-pill primary-wa rubber-interact" title="Chat langsung via WhatsApp">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                     </svg>
                     <span>WhatsApp</span>
                 </a>
 
-                <a href="https://instagram.com/am.rndyf0" target="_blank" class="strip-link" title="Kunjungi Akun Instagram">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <button class="action-pill copy-btn rubber-interact" onclick="copyPhoneNumber()" title="Salin nomor kontak">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>0882-0105-19801</span>
+                </button>
+
+                <a href="https://instagram.com/am.rndyf0" target="_blank" class="action-pill rubber-interact" title="Instagram @am.rndyf0">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
@@ -68,242 +120,235 @@
                     <span>Instagram</span>
                 </a>
 
-                <a href="https://github.com/secretr2ndf-oss" target="_blank" class="strip-link" title="Lihat Profil GitHub">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <a href="https://github.com/secretr2ndf-oss" target="_blank" class="action-pill rubber-interact" title="GitHub @secretr2ndf-oss">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
                     </svg>
                     <span>GitHub</span>
                 </a>
 
-                <a href="mailto:randyfa.work@gmail.com?subject=Tawaran%20Kerjasama%20/%20Diskusi%20Portofolio" class="strip-link" title="Kirim Surat Elektronik">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="mailto:randyfa.work@gmail.com?subject=Inquiry%20Kerjasama%20/%20Diskusi%20Portofolio" class="action-pill rubber-interact" title="Kirim Email">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
                     <span>Email</span>
                 </a>
-
-                <button onclick="window.print()" class="strip-link print-button" title="Cetak atau Simpan sebagai PDF">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 6 2 18 2 18 9"></polyline>
-                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-                        <rect x="6" y="14" width="12" height="8"></rect>
-                    </svg>
-                    <span>Cetak CV</span>
-                </button>
             </div>
         </header>
 
-        <!-- RINGKASAN REKAM JEJAK -->
-        <section class="summary-card">
-            <h2 class="card-kicker">RINGKASAN PROFIL</h2>
-            <p class="summary-text">
-                Mahasiswa Sistem Informasi ITATS dengan latar belakang ganda dalam disiplin teknis dan kepemimpinan organisasi. Berpengalaman di bidang kendali mutu (Quality Control), pelayanan pelanggan berstandar internasional, serta manajemen operasional usaha. Aktif mengabdi sebagai Asisten Laboratorium Sistem Informasi ITATS (2026) dan memegang amanah kesekretariatan organisasi kepemudaan serta bela diri.
-            </p>
+        <!-- ANIMATED QUICK STATS ROW -->
+        <section class="stats-grid-row">
+            <div class="stat-box rubber-interact">
+                <span class="stat-value" data-count="2">2+</span>
+                <span class="stat-label">Periode GMBU Surabaya</span>
+            </div>
+            <div class="stat-box rubber-interact">
+                <span class="stat-value" data-count="7">7+</span>
+                <span class="stat-label">Tahun Pagar Nusa</span>
+            </div>
+            <div class="stat-box rubber-interact">
+                <span class="stat-value">Aslab Aktif</span>
+                <span class="stat-label">Lab SI ITATS</span>
+            </div>
+            <div class="stat-box rubber-interact">
+                <span class="stat-value" data-count="3">3+</span>
+                <span class="stat-label">Bidang Karir & Bisnis</span>
+            </div>
         </section>
 
-        <!-- KONTEN UTAMA -->
-        <div class="content-layout">
+        <!-- INTERACTIVE CATEGORY FILTER TABS -->
+        <nav class="filter-tabs-bar" aria-label="Filter Portofolio">
+            <button class="tab-btn active" data-filter="all">Semua</button>
+            <button class="tab-btn" data-filter="projects">Proyek & IT</button>
+            <button class="tab-btn" data-filter="career">Karir & Usaha</button>
+            <button class="tab-btn" data-filter="organization">Organisasi</button>
+        </nav>
 
-            <!-- 1. PENDIDIKAN & AKADEMIK -->
-            <section class="content-card">
-                <div class="card-header-clean">
-                    <span class="card-kicker">01 / PENDIDIKAN TINGGI</span>
-                    <h2 class="card-title">Pendidikan & Laboratorium</h2>
+        <!-- MAIN BENTO CONTAINER -->
+        <div class="bento-container">
+
+            <!-- 1. FEATURED PROJECTS (CLICKABLE MODAL TRIGGER) -->
+            <section class="bento-card filterable-section" data-category="projects" id="projects">
+                <div class="card-header-row">
+                    <span class="card-kicker">01 / KARYA & TEKNOLOGI</span>
+                    <h2 class="card-title">Featured Projects (Klik untuk Detail)</h2>
                 </div>
 
-                <div class="timeline-group">
-                    <div class="timeline-row">
-                        <div class="timeline-meta">
-                            <span class="meta-year">2023 – Sekarang</span>
-                            <span class="meta-tag blue">Strata-1 (S1)</span>
+                <div class="projects-deck">
+                    <!-- Project 1 -->
+                    <article class="project-card rubber-interact" onclick="openProjectModal('bento')">
+                        <div class="project-top-meta">
+                            <h3 class="project-heading">Modern Bento Grid Portfolio Web</h3>
+                            <span class="project-badge">HTML5 • CSS3 Glassmorphism • Netlify CI/CD</span>
                         </div>
-                        <div class="timeline-body">
-                            <h3 class="role-heading">S1 Sistem Informasi</h3>
-                            <p class="role-place">Institut Teknologi Adhi Tama Surabaya (ITATS)</p>
-                            <p class="role-desc">Fokus pada analisis kebutuhan sistem informasi, pemodelan proses bisnis, rekayasa basis data, dan pengembangan perangkat lunak.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-row">
-                        <div class="timeline-meta">
-                            <span class="meta-year">2026 – Sekarang</span>
-                            <span class="meta-tag dark">Asistensi Akademik</span>
-                        </div>
-                        <div class="timeline-body">
-                            <h3 class="role-heading">Asisten Laboratorium Sistem Informasi</h3>
-                            <p class="role-place">Laboratorium Sistem Informasi ITATS</p>
-                            <p class="role-desc">Membimbing mahasiswa dalam sesi praktikum komputasi, evaluasi tugas praktikum, serta asistensi teknis pemeliharaan fasilitas laboratorium.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 2. KARYA & PROYEK TERPILIH -->
-            <section class="content-card">
-                <div class="card-header-clean">
-                    <span class="card-kicker">02 / PROYEK & KARYA</span>
-                    <h2 class="card-title">Karya & Proyek Terpilih</h2>
-                </div>
-
-                <div class="project-grid">
-                    <article class="project-box">
-                        <div class="project-top">
-                            <h3 class="project-name">Perancangan Basis Data Relasional</h3>
-                            <span class="badge-chip">Database • SQL • ERD</span>
-                        </div>
-                        <p class="project-desc">Analisis kebutuhan sistem informasi, pemodelan relasi entitas (Entity Relationship Diagram), normalisasi data tingkat 1NF hingga 3NF, serta perancangan skema relasional terstruktur.</p>
+                        <p class="project-snippet">Arsitektur web portofolio personal berkinerja tinggi, responsif, dan terintegrasi otomatis dengan Git Version Control & Netlify Deployment.</p>
+                        <span class="click-hint">Buka detail proyek &rarr;</span>
                     </article>
 
-                    <article class="project-box">
-                        <div class="project-top">
-                            <h3 class="project-name">Analisis Model Bisnis (BMC)</h3>
-                            <span class="badge-chip">Business Model Canvas</span>
+                    <!-- Project 2 -->
+                    <article class="project-card rubber-interact" onclick="openProjectModal('database')">
+                        <div class="project-top-meta">
+                            <h3 class="project-heading">Perancangan Basis Data & Sistem Informasi</h3>
+                            <span class="project-badge">Database Modeling • Relational ERD • SQL</span>
                         </div>
-                        <p class="project-desc">Penyusunan 9 elemen kunci Business Model Canvas (Value Propositions, Customer Segments, Channels, Revenue Streams, Cost Structure) untuk pemetaan kelayakan usaha dan sistem operasional.</p>
+                        <p class="project-snippet">Analisis kebutuhan sistem informasi, normalisasi data 1NF-3NF, dan pemodelan relasional database untuk efisiensi kueri transaksi.</p>
+                        <span class="click-hint">Buka detail proyek &rarr;</span>
                     </article>
 
-                    <article class="project-box">
-                        <div class="project-top">
-                            <h3 class="project-name">Modul & Panduan Praktikum Lab SI</h3>
-                            <span class="badge-chip">Instruksional • Troubleshooting</span>
+                    <!-- Project 3 -->
+                    <article class="project-card rubber-interact" onclick="openProjectModal('lab')">
+                        <div class="project-top-meta">
+                            <h3 class="project-heading">Modul & Asistensi Praktikum Lab SI ITATS</h3>
+                            <span class="project-badge">Modul Ajar • Code Troubleshooting</span>
                         </div>
-                        <p class="project-desc">Penyusunan panduan materi praktikum mahasiswa, pengujian kelayakan modul aplikasi, serta pendampingan langsung penanganan kendala kode program dan database.</p>
+                        <p class="project-snippet">Penyusunan modul instruksional praktikum komputasi, validasi studi kasus, dan pendampingan penyelesaian kendala logika pemrograman mahasiswa.</p>
+                        <span class="click-hint">Buka detail proyek &rarr;</span>
                     </article>
                 </div>
             </section>
 
-            <!-- 3. PENGALAMAN KERJA & BISNIS -->
-            <section class="content-card">
-                <div class="card-header-clean">
-                    <span class="card-kicker">03 / PENGALAMAN PROFESIONAL</span>
-                    <h2 class="card-title">Karir & Wirausaha</h2>
+            <!-- 2. INTERACTIVE JOURNEY TIMELINE (2018 - 2030) -->
+            <section class="bento-card filterable-section" data-category="career organization" id="timeline">
+                <div class="card-header-row">
+                    <span class="card-kicker">02 / REKAM JEJAK INTERAKTIF</span>
+                    <h2 class="card-title">Interactive Journey Timeline (2018 – 2030)</h2>
                 </div>
 
-                <div class="work-stack">
-                    <div class="work-item">
-                        <div class="work-header">
-                            <div>
-                                <h3 class="role-heading">Quality Control (QC)</h3>
-                                <p class="role-place">CV. Shafa Multimedia (Perusahaan Percetakan)</p>
+                <div class="timeline-wrapper">
+                    <!-- Dynamic Progress Line -->
+                    <div class="timeline-track-line"></div>
+
+                    <!-- Node 1 -->
+                    <div class="timeline-entry active-node">
+                        <div class="timeline-node-dot"></div>
+                        <div class="timeline-content-card rubber-interact">
+                            <div class="timeline-header-row">
+                                <h3 class="timeline-role">Sekretaris PAC Pencak Silat Pagar Nusa</h3>
+                                <span class="timeline-year">2025 – 2030</span>
                             </div>
-                            <span class="date-badge">2023 – 2024</span>
+                            <p class="timeline-org">Pimpinan Anak Cabang (PAC) Pagar Nusa</p>
+                            <p class="timeline-desc">Memimpin tata kelola kesekretariatan resmi, pengarsipan berkas legalitas, persuratan hierarki organisasi, serta koordinasi aktif lintas tingkatan ranting.</p>
                         </div>
-                        <p class="work-jobdesc">
-                            <strong>Tanggung Jawab:</strong> Menginspeksi standar mutu hasil produksi percetakan, memastikan ketepatan kalibrasi warna dan presisi pemotongan, serta melakukan verifikasi kelayakan barang jadi sebelum didistribusikan ke pemesan.
-                        </p>
                     </div>
 
-                    <div class="work-item">
-                        <div class="work-header">
-                            <div>
-                                <h3 class="role-heading">Customer Service</h3>
-                                <p class="role-place">WAKi International Group</p>
+                    <!-- Node 2 -->
+                    <div class="timeline-entry active-node">
+                        <div class="timeline-node-dot"></div>
+                        <div class="timeline-content-card rubber-interact">
+                            <div class="timeline-header-row">
+                                <h3 class="timeline-role">Asisten Laboratorium & Mahasiswa S1 Sistem Informasi</h3>
+                                <span class="timeline-year">2024 – Sekarang</span>
                             </div>
-                            <span class="date-badge">2022 – 2023</span>
+                            <p class="timeline-org">Institut Teknologi Adhi Tama Surabaya (ITATS)</p>
+                            <p class="timeline-desc">Menjalani perkuliahan S1 Sistem Informasi sekaligus mengabdi sebagai Asisten Lab: memandu praktikum Basis Data, Pemrograman, serta asistensi komputasi laboratorium.</p>
                         </div>
-                        <p class="work-jobdesc">
-                            <strong>Tanggung Jawab:</strong> Memberikan pelayanan konsultasi pelanggan, menangani pertanyaan dan keluhan klien secara solutif, serta menjaga standar kepuasan pelanggan pada perusahaan multinasional.
-                        </p>
                     </div>
 
-                    <div class="work-item">
-                        <div class="work-header">
-                            <div>
-                                <h3 class="role-heading">Founder & Pengelola Usaha</h3>
-                                <p class="role-place">Usaha Kedai Mandiri (Wirausaha)</p>
+                    <!-- Node 3 -->
+                    <div class="timeline-entry">
+                        <div class="timeline-node-dot"></div>
+                        <div class="timeline-content-card rubber-interact">
+                            <div class="timeline-header-row">
+                                <h3 class="timeline-role">Pengurus GMBU Kota Surabaya, QC & Wirausaha Mandiri</h3>
+                                <span class="timeline-year">2023 – 2024</span>
                             </div>
-                            <span class="date-badge">2023 – 2024</span>
+                            <p class="timeline-org">GMBU Surabaya, CV. Shafa Multimedia & Bisnis Kedai</p>
+                            <p class="timeline-desc">Aktif dalam 2 periode kepengurusan GMBU Kota Surabaya. Bekerja sebagai Quality Control (QC) percetakan di CV. Shafa Multimedia dan mengelola operasional wirausaha kedai mandiri.</p>
                         </div>
-                        <p class="work-jobdesc">
-                            <strong>Tanggung Jawab:</strong> Menerapkan konsep Business Model Canvas (BMC) dalam perencanaan usaha, mengelola pengadaan bahan baku, pembukuan kas transaksi harian, serta penetapan strategi pemasaran pelanggan.
-                        </p>
+                    </div>
+
+                    <!-- Node 4 -->
+                    <div class="timeline-entry">
+                        <div class="timeline-node-dot"></div>
+                        <div class="timeline-content-card rubber-interact">
+                            <div class="timeline-header-row">
+                                <h3 class="timeline-role">Customer Service Representative</h3>
+                                <span class="timeline-year">2022 – 2023</span>
+                            </div>
+                            <p class="timeline-org">WAKi International Group</p>
+                            <p class="timeline-desc">Memberikan konsultasi produk berstandar internasional, menangani negosiasi pelanggan, mediasi kendala secara solutif, serta menjaga tingkat retensi klien.</p>
+                        </div>
+                    </div>
+
+                    <!-- Node 5 -->
+                    <div class="timeline-entry">
+                        <div class="timeline-node-dot"></div>
+                        <div class="timeline-content-card rubber-interact">
+                            <div class="timeline-header-row">
+                                <h3 class="timeline-role">Anggota Aktif Perguruan Pencak Silat Pagar Nusa</h3>
+                                <span class="timeline-year">2018 – Sekarang</span>
+                            </div>
+                            <p class="timeline-org">Pencak Silat Pagar Nusa Indonesia</p>
+                            <p class="timeline-desc">Menempa ketahanan fisik, mentalitas kepemimpinan, kedisiplinan seni bela diri tradisional, serta nilai-nilai kekeluargaan dan dedikasi pengabdian masyarakat.</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 4. ORGANISASI & KEPEMIMPINAN -->
-            <section class="content-card">
-                <div class="card-header-clean">
-                    <span class="card-kicker">04 / KEPEMIMPINAN & ORGANISASI</span>
-                    <h2 class="card-title">Organisasi & Pengabdian</h2>
+            <!-- 3. CREDENTIALS & SKILLS -->
+            <section class="bento-card filterable-section" data-category="projects career organization" id="credentials">
+                <div class="card-header-row">
+                    <span class="card-kicker">03 / KREDENSIAL & KOMPETENSI</span>
+                    <h2 class="card-title">Sertifikasi, SK & Keahlian</h2>
                 </div>
 
-                <div class="org-layout">
-                    <div class="org-entry">
-                        <div class="org-entry-header">
-                            <h3 class="role-heading">Garda Muda Bibit Unggul Kota Surabaya</h3>
-                            <span class="org-period">Periode 2023 & 2024</span>
+                <div class="credential-stack" style="margin-bottom: 22px;">
+                    <div class="credential-item rubber-interact">
+                        <span class="cred-icon">📜</span>
+                        <div class="cred-text">
+                            <h4>Surat Keputusan (SK) Asisten Laboratorium SI ITATS</h4>
+                            <p>Diterbitkan oleh Laboratorium Sistem Informasi ITATS • Masa Tugas Aktif</p>
                         </div>
-                        <p class="role-place">Organisasi Kepemudaan Kota Surabaya (Terpilih Kembali)</p>
-                        <p class="role-desc">Berpartisipasi aktif dalam perancangan dan pelaksanaan program pembinaan generasi muda, kegiatan sosial kemasyarakatan, serta jejaring pemuda di Surabaya.</p>
                     </div>
 
-                    <div class="org-entry">
-                        <div class="org-entry-header">
-                            <h3 class="role-heading">Pencak Silat Pagar Nusa</h3>
-                            <span class="org-period highlight">2018 – Sekarang</span>
+                    <div class="credential-item rubber-interact">
+                        <span class="cred-icon">📜</span>
+                        <div class="cred-text">
+                            <h4>Surat Keputusan (SK) Sekretaris PAC Pagar Nusa</h4>
+                            <p>Pimpinan Anak Cabang Pencak Silat Pagar Nusa • Masa Bakti 2025 – 2030</p>
                         </div>
-                        <p class="role-place">Sekretaris PAC Masa Bakti 2025 – 2030</p>
-                        <p class="role-desc">Telah bergabung aktif sejak 2018 dan kini dipercaya memimpin tata kelola administrasi organisasi, persuratan resmi, dan koordinasi internal Pimpinan Anak Cabang (PAC).</p>
                     </div>
 
-                    <div class="org-entry">
-                        <div class="org-entry-header">
-                            <h3 class="role-heading">HIMSI ITATS</h3>
-                            <span class="org-period">Anggota Aktif</span>
+                    <div class="credential-item rubber-interact">
+                        <span class="cred-icon">🎖️</span>
+                        <div class="cred-text">
+                            <h4>Sertifikat Pengurus Garda Muda Bibit Unggul (GMBU) Kota Surabaya</h4>
+                            <p>Dua Periode Berturut-turut (Periode 2023 & Periode 2024)</p>
                         </div>
-                        <p class="role-place">Himpunan Mahasiswa Sistem Informasi ITATS</p>
-                        <p class="role-desc">Berpartisipasi dalam agenda keorganisasian kemahasiswaan jurusan Sistem Informasi, kepanitiaan seminar akademik, serta kegiatan internal program studi.</p>
-                    </div>
-
-                    <div class="org-entry">
-                        <div class="org-entry-header">
-                            <h3 class="role-heading">MAPAS INDONESIA</h3>
-                            <span class="org-period">Anggota Aktif</span>
-                        </div>
-                        <p class="role-place">Mahasiswa Pecinta Alam dan Seni Indonesia</p>
-                        <p class="role-desc">Terlibat dalam pembinaan ketahanan mental dan fisik di alam terbuka, pelestarian lingkungan hidup, serta kegiatan apresiasi seni dan kebudayaan.</p>
                     </div>
                 </div>
-            </section>
 
-            <!-- 5. KEAHLIAN & KOMPETENSI TERSTRUKTUR -->
-            <section class="content-card">
-                <div class="card-header-clean">
-                    <span class="card-kicker">05 / KUALIFIKASI</span>
-                    <h2 class="card-title">Keahlian & Kompetensi</h2>
-                </div>
-
-                <div class="skills-categorized">
-                    <div class="skill-category">
-                        <h4 class="category-title">Sistem & Teknologi</h4>
-                        <div class="pill-wrap">
-                            <span class="skill-tag">Analisis Sistem Informasi</span>
-                            <span class="skill-tag">Perancangan Basis Data (SQL)</span>
-                            <span class="skill-tag">Business Model Canvas (BMC)</span>
-                            <span class="skill-tag">Web Dasar (HTML & CSS)</span>
-                            <span class="skill-tag">Git & GitHub</span>
+                <!-- Structured Skills Matrix -->
+                <div class="skills-grouped">
+                    <div>
+                        <h4 class="skill-cluster-title">Sistem Informasi, Data & Rekayasa Web</h4>
+                        <div class="chips-wrap">
+                            <span class="skill-pill rubber-interact">Sistem Informasi & Analisis</span>
+                            <span class="skill-pill rubber-interact">Perancangan Basis Data (SQL)</span>
+                            <span class="skill-pill rubber-interact">Web Development (HTML5/CSS3)</span>
+                            <span class="skill-pill rubber-interact">Git & GitHub (Version Control)</span>
+                            <span class="skill-pill rubber-interact">Business Model Canvas (BMC)</span>
                         </div>
                     </div>
 
-                    <div class="skill-category">
-                        <h4 class="category-title">Manajemen & Mutu</h4>
-                        <div class="pill-wrap">
-                            <span class="skill-tag">Quality Control & Jaminan Mutu</span>
-                            <span class="skill-tag">Customer Relationship Management</span>
-                            <span class="skill-tag">Manajemen Operasional</span>
-                            <span class="skill-tag">Administrasi & Kesekretariatan</span>
+                    <div>
+                        <h4 class="skill-cluster-title">Manajemen Operasional & Mutu</h4>
+                        <div class="chips-wrap">
+                            <span class="skill-pill rubber-interact">Quality Control & Inspeksi Mutu</span>
+                            <span class="skill-pill rubber-interact">Customer Relationship Management (CRM)</span>
+                            <span class="skill-pill rubber-interact">Manajemen Operasional Usaha</span>
+                            <span class="skill-pill rubber-interact">Administrasi & Kesekretariatan</span>
                         </div>
                     </div>
 
-                    <div class="skill-category">
-                        <h4 class="category-title">Kepemimpinan & Interpersonal</h4>
-                        <div class="pill-wrap">
-                            <span class="skill-tag">Kepemimpinan Organisasi</span>
-                            <span class="skill-tag">Public Speaking & Negosiasi</span>
-                            <span class="skill-tag">Kedisiplinan & Ketahanan Mental</span>
-                            <span class="skill-tag">Kegiatan Alam Bebas</span>
+                    <div>
+                        <h4 class="skill-cluster-title">Kepemimpinan & Interpersonal</h4>
+                        <div class="chips-wrap">
+                            <span class="skill-pill rubber-interact">Kepemimpinan Organisasi</span>
+                            <span class="skill-pill rubber-interact">Public Speaking & Negosiasi</span>
+                            <span class="skill-pill rubber-interact">Kedisiplinan & Ketahanan Mental</span>
+                            <span class="skill-pill rubber-interact">Kegiatan Alam Bebas (MAPAS)</span>
                         </div>
                     </div>
                 </div>
@@ -311,28 +356,393 @@
 
         </div>
 
-        <!-- FOOTER & KONTAK AKHIR -->
-        <footer class="footer-cta">
-            <div class="footer-content">
-                <h2 class="footer-heading">Mari Terhubung & Berkolaborasi</h2>
-                <p class="footer-subtext">Terbuka untuk diskusi proyek teknologi, kepengurusan organisasi, maupun peluang asistensi dan magang.</p>
-                
-                <div class="footer-action-row">
-                    <a href="https://wa.me/62882010519801?text=Halo%20Randyfa,%20saya%20melihat%20portofolio%20Anda%20dan%20tertarik%20untuk%20berdiskusi%20lebih%20lanjut." target="_blank" class="cta-btn primary">
-                        Chat via WhatsApp
-                    </a>
-                    <a href="mailto:randyfa.work@gmail.com?subject=Kolaborasi%20/%20Diskusi%20Portofolio" class="cta-btn secondary">
-                        Kirim Email
-                    </a>
-                </div>
+        <!-- FOOTER CALL TO ACTION -->
+        <footer class="bento-card" style="margin-top: 22px; text-align: center;">
+            <h3 style="font-size: 19px; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;">Mari Berkolaborasi Bersama</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 18px;">Terbuka untuk diskusi proyek rekayasa sistem informasi, asistensi akademik, dan peluang karir profesional.</p>
+            <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                <a href="https://wa.me/62882010519801?text=Halo%20Randyfa,%20saya%20melihat%20portofolio%20Anda." target="_blank" class="action-pill primary-wa rubber-interact">
+                    Chat WhatsApp
+                </a>
+                <a href="mailto:randyfa.work@gmail.com" class="action-pill rubber-interact">
+                    Kirim Surat Email
+                </a>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Muhamad Randyfa Akbar Maulana. Mahasiswa Sistem Informasi ITATS.</p>
-            </div>
+            <p style="margin-top: 22px; font-size: 11.5px; color: var(--text-muted);">&copy; 2026 Muhamad Randyfa Akbar Maulana. ITATS Surabaya.</p>
         </footer>
 
     </main>
+
+    <!-- FLOATING BOTTOM NAVIGATION DOCK -->
+    <nav class="floating-dock-nav" aria-label="Quick Dock Navigation">
+        <a href="#home" class="dock-item" title="Kembali ke atas">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            <span>Home</span>
+        </a>
+        <a href="#projects" class="dock-item" title="Proyek">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <span>Proyek</span>
+        </a>
+        <a href="#timeline" class="dock-item" title="Timeline">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Timeline</span>
+        </a>
+        <button class="dock-item dock-gear5-btn rubber-interact" id="dockGear5Btn" title="Awakening Mode">
+            <span>⚡ Gear 5</span>
+        </button>
+    </nav>
+
+    <!-- SMART MINI CHATBOT WIDGET ("TANYA RANDYFA AI") -->
+    <button id="chatbotTriggerBtn" class="chatbot-trigger-btn rubber-interact" title="Buka Tanya Randyfa AI Assistant">
+        <img src="fotoprofilsaya.jpeg" onerror="this.onerror=null; this.src='profile.jpg';" alt="Randyfa AI Avatar" class="chat-avatar-mini">
+        <span>Tanya Randyfa AI</span>
+        <span class="chat-unread-dot"></span>
+    </button>
+
+    <div id="chatbotCardWindow" class="chatbot-card-window">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="chat-header-profile">
+                <img src="fotoprofilsaya.jpeg" onerror="this.onerror=null; this.src='profile.jpg';" alt="Randyfa AI" class="chat-avatar-mini">
+                <div>
+                    <div class="chat-header-name">Tanya Randyfa AI</div>
+                    <div class="chat-header-status">Online • 2026 Virtual Assistant</div>
+                </div>
+            </div>
+            <button id="chatCloseBtn" class="chat-close-btn" title="Tutup Chat">&times;</button>
+        </div>
+
+        <!-- Chat History Area -->
+        <div class="chat-messages-area" id="chatMessagesArea">
+            <div class="chat-bubble bot">
+                Halo! Saya asisten virtual portofolio <strong>Muhamad Randyfa Akbar Maulana</strong>. Ada yang bisa saya bantu jelaskan mengenai keahlian IT, pengalaman organisasi, atau kolaborasi?
+            </div>
+        </div>
+
+        <!-- Quick Reply Suggestion Chips -->
+        <div class="chat-quick-replies">
+            <button class="chip-btn" onclick="sendQuickReply('💻 Keahlian IT & Aslab?')">💻 Keahlian IT & Aslab?</button>
+            <button class="chip-btn" onclick="sendQuickReply('💼 Pengalaman Kerja?')">💼 Pengalaman Kerja?</button>
+            <button class="chip-btn" onclick="sendQuickReply('🏆 Organisasi & Silat?')">🏆 Organisasi & Silat?</button>
+            <button class="chip-btn" onclick="sendQuickReply('📞 Kontak & Kolaborasi?')">📞 Kontak & Kolaborasi?</button>
+        </div>
+
+        <!-- Chat Input Bar -->
+        <div class="chat-input-bar">
+            <input type="text" id="chatTextInput" class="chat-text-input" placeholder="Ketik pertanyaan Anda..." onkeypress="handleChatKeyPress(event)">
+            <button class="chat-send-btn" onclick="handleSendMessage()" title="Kirim Pesan">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- PROJECT DETAILS MODAL -->
+    <div id="projectModalOverlay" class="modal-overlay" onclick="closeProjectModalOnBackdrop(event)">
+        <div class="modal-box" role="dialog" aria-modal="true">
+            <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="Tutup Modal">&times;</button>
+            <div class="modal-header">
+                <span class="modal-badge" id="modalBadge">Kategori</span>
+                <h3 class="modal-title" id="modalTitle">Judul Proyek</h3>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Injected via JavaScript -->
+            </div>
+            <div class="modal-stack-tags" id="modalStackTags">
+                <!-- Tech tags injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC (MODULAR, ROBUST & CLEAN) -->
+    <script>
+        /* ----------------------------------------------------------------------
+           1. GEAR 5 AWAKENING MODE (MONKEY D. LUFFY SUN GOD NIKA THEME)
+           ---------------------------------------------------------------------- */
+        const gear5ToggleBtn = document.getElementById('gear5ToggleBtn');
+        const dockGear5Btn = document.getElementById('dockGear5Btn');
+        const statusText = document.getElementById('statusText');
+
+        function toggleGear5Mode() {
+            const isGear5 = document.body.classList.toggle('gear5-mode');
+            localStorage.setItem('theme_gear5', isGear5 ? 'enabled' : 'disabled');
+            
+            if (isGear5) {
+                gear5ToggleBtn.innerHTML = '<span>⚡ Awakened!</span>';
+                dockGear5Btn.innerHTML = '<span>⚡ Awakened!</span>';
+                statusText.textContent = 'Drums of Liberation • Nika Awakened';
+                showToast('⚡ Gear 5 (Sun God Nika) Awakening Diaktifkan!');
+            } else {
+                gear5ToggleBtn.innerHTML = '<span>⚡ Gear 5 Mode</span>';
+                dockGear5Btn.innerHTML = '<span>⚡ Gear 5</span>';
+                statusText.textContent = 'Drums of Liberation • Available';
+                showToast('Kembali ke Mode Profesional Standar.');
+            }
+        }
+
+        gear5ToggleBtn.addEventListener('click', toggleGear5Mode);
+        dockGear5Btn.addEventListener('click', toggleGear5Mode);
+
+        // Remember user preference
+        if (localStorage.getItem('theme_gear5') === 'enabled') {
+            document.body.classList.add('gear5-mode');
+            gear5ToggleBtn.innerHTML = '<span>⚡ Awakened!</span>';
+            dockGear5Btn.innerHTML = '<span>⚡ Awakened!</span>';
+            statusText.textContent = 'Drums of Liberation • Nika Awakened';
+        }
+
+        /* ----------------------------------------------------------------------
+           2. TOAST NOTIFICATION & COPY PHONE
+           ---------------------------------------------------------------------- */
+        function showToast(message) {
+            const toast = document.getElementById('toastNotification');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2600);
+        }
+
+        function copyPhoneNumber() {
+            const phone = '0882010519801';
+            navigator.clipboard.writeText(phone).then(() => {
+                showToast('Nomor 0882-0105-19801 disalin ke clipboard!');
+            }).catch(() => {
+                showToast('Nomor: 0882-0105-19801');
+            });
+        }
+
+        /* ----------------------------------------------------------------------
+           3. CATEGORY FILTER TABS
+           ---------------------------------------------------------------------- */
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const filterableSections = document.querySelectorAll('.filterable-section');
+
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+                filterableSections.forEach(section => {
+                    if (filter === 'all') {
+                        section.style.display = 'block';
+                    } else {
+                        const categories = section.getAttribute('data-category').split(' ');
+                        section.style.display = categories.includes(filter) ? 'block' : 'none';
+                    }
+                });
+            });
+        });
+
+        /* ----------------------------------------------------------------------
+           4. FEATURED PROJECTS DATA & MODAL
+           ---------------------------------------------------------------------- */
+        const projectDetails = {
+            bento: {
+                badge: 'Web Development & UI/UX',
+                title: 'Modern Bento Grid Portfolio Web',
+                body: `
+                    <p><strong>Deskripsi Proyek:</strong> Website portofolio personal berarsitektur Bento Grid yang memadukan estetika Dark Glassmorphism, responsivitas tinggi, serta integrasi CI/CD Netlify otomatis.</p>
+                    <p><strong>Fitur Unggulan:</strong></p>
+                    <ul>
+                        <li>Desain adaptif mobile-first untuk pengalaman tautan bio media sosial.</li>
+                        <li>Integrasi otomatis GitHub Repository dengan Netlify Build Pipeline.</li>
+                        <li>Optimalisasi SEO dan Open Graph Meta Tags untuk pratinjau media sosial.</li>
+                    </ul>
+                `,
+                tech: ['HTML5 Semantic', 'CSS3 Modern Grid', 'Glassmorphism', 'Netlify CI/CD', 'Git Version Control']
+            },
+            database: {
+                badge: 'Information Systems & Data Modeling',
+                title: 'Perancangan Basis Data & Sistem Informasi',
+                body: `
+                    <p><strong>Deskripsi Proyek:</strong> Rekayasa skema basis data relasional komprehensif mulai dari pemetaan kebutuhan entitas (Entity Relationship Diagram), normalisasi data 1NF hingga 3NF, hingga pembuatan skema tabel SQL teroptimasi.</p>
+                    <p><strong>Metodologi & Cakupan:</strong></p>
+                    <ul>
+                        <li>Pemetaan kardinalitas relasi relasional untuk mencegah redundansi dan anomali data.</li>
+                        <li>Penerapan integritas referensial dan kueri terstruktur (DDL & DML).</li>
+                        <li>Studi kasus perancangan sistem informasi akademik dan manajemen inventaris.</li>
+                    </ul>
+                `,
+                tech: ['Relational Database', 'ERD Modeling', 'Data Normalization', 'SQL Kueri', 'System Analysis']
+            },
+            lab: {
+                badge: 'Academic Instruction & Troubleshooting',
+                title: 'Modul & Asistensi Praktikum Lab SI ITATS',
+                body: `
+                    <p><strong>Deskripsi Proyek:</strong> Mengembangkan materi modul ajar praktikum komputasi dan memandu mahasiswa Sistem Informasi ITATS dalam memecahkan kendala logika pemrograman serta manajemen basis data.</p>
+                    <p><strong>Tanggung Jawab:</strong></p>
+                    <ul>
+                        <li>Pengujian studi kasus modul laboratorium sebelum pelaksanaan sesi praktikum.</li>
+                        <li>Pendampingan langsung troubleshooting bug, error sintaksis, dan relasi database mahasiswa.</li>
+                        <li>Evaluasi objektif tugas dan proyek akhir praktikum laboratorium.</li>
+                    </ul>
+                `,
+                tech: ['Pedagogi Instruksional', 'Code Troubleshooting', 'Database Testing', 'Mentoring Mahasiswa']
+            }
+        };
+
+        const modalOverlay = document.getElementById('projectModalOverlay');
+        const modalBadge = document.getElementById('modalBadge');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = document.getElementById('modalBody');
+        const modalStackTags = document.getElementById('modalStackTags');
+
+        function openProjectModal(key) {
+            const data = projectDetails[key];
+            if (!data) return;
+
+            modalBadge.textContent = data.badge;
+            modalTitle.textContent = data.title;
+            modalBody.innerHTML = data.body;
+            modalStackTags.innerHTML = data.tech.map(t => `<span class="project-badge">${t}</span>`).join('');
+
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeProjectModalOnBackdrop(e) {
+            if (e.target === modalOverlay) {
+                closeProjectModal();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeProjectModal();
+            }
+        });
+
+        /* ----------------------------------------------------------------------
+           5. SMART MINI CHATBOT ASSISTANT ("TANYA RANDYFA AI")
+           ---------------------------------------------------------------------- */
+        const chatbotTriggerBtn = document.getElementById('chatbotTriggerBtn');
+        const chatbotCardWindow = document.getElementById('chatbotCardWindow');
+        const chatCloseBtn = document.getElementById('chatCloseBtn');
+        const chatMessagesArea = document.getElementById('chatMessagesArea');
+        const chatTextInput = document.getElementById('chatTextInput');
+
+        chatbotTriggerBtn.addEventListener('click', () => {
+            chatbotCardWindow.classList.add('active');
+            chatTextInput.focus();
+        });
+
+        chatCloseBtn.addEventListener('click', () => {
+            chatbotCardWindow.classList.remove('active');
+        });
+
+        const botKnowledge = {
+            skills: `
+                💻 <strong>Keahlian IT & Peran Asisten Lab:</strong><br>
+                Randyfa adalah Mahasiswa Sistem Informasi ITATS sekaligus <strong>Asisten Laboratorium SI ITATS (2024–Sekarang)</strong>. Keahlian utamanya meliputi:
+                <br>• Analisis Sistem Informasi & Pemodelan Relasional (ERD & SQL)
+                <br>• Business Model Canvas (BMC) & Perancangan Bisnis
+                <br>• Web Development Dasar (HTML5 & Modern CSS)
+                <br>• Troubleshooting & Bimbingan Praktikum Komputasi Mahasiswa.
+            `,
+            career: `
+                💼 <strong>Pengalaman Kerja & Bisnis:</strong><br>
+                • <strong>Quality Control (QC)</strong> di <em>CV. Shafa Multimedia</em> (2023–2024): Memeriksa presisi warna, standar cetak, dan kelayakan barang sebelum distribusi.
+                <br>• <strong>Customer Service</strong> di <em>WAKi International Group</em> (2022–2023): Pelayanan pelanggan berstandar internasional dan mediasi solutif.
+                <br>• <strong>Wirausaha Mandiri</strong> (2023–2024): Menerapkan kerangka BMC dalam operasional bisnis kedai, stok, dan kas harian.
+            `,
+            org: `
+                🏆 <strong>Organisasi & Kepemimpinan:</strong><br>
+                • <strong>Pencak Silat Pagar Nusa:</strong> Anggota aktif sejak 2018 (7+ tahun) dan memegang amanah sebagai <strong>Sekretaris PAC masa bakti 2025–2030</strong>.
+                <br>• <strong>Garda Muda Bibit Unggul (GMBU) Kota Surabaya:</strong> Pengurus aktif selama 2 periode (2023 & 2024).
+                <br>• Anggota aktif di <strong>HIMSI ITATS</strong> dan <strong>MAPAS INDONESIA</strong>.
+            `,
+            contact: `
+                📞 <strong>Kontak & Kolaborasi:</strong><br>
+                Anda dapat langsung menghubungi Randyfa melalui:
+                <br>• <strong>WhatsApp:</strong> <a href="https://wa.me/62882010519801" target="_blank" style="color:#16a34a; font-weight:700;">+62 882-0105-19801</a>
+                <br>• <strong>Instagram:</strong> <a href="https://instagram.com/am.rndyf0" target="_blank" style="color:#7c3aed; font-weight:700;">@am.rndyf0</a>
+                <br>• <strong>GitHub:</strong> <a href="https://github.com/secretr2ndf-oss" target="_blank">secretr2ndf-oss</a>
+                <br>• <strong>Email:</strong> randyfa.work@gmail.com
+            `,
+            gear5: `
+                ⚡ <strong>Gear 5 / Sun God Nika Mode:</strong><br>
+                Fitur ini terinspirasi dari Awakening Monkey D. Luffy! Mode ini mengaktifkan Toon/Rubber Physics pada kartu, Nika Cloud Hagoromo di foto profil, denyut Drums of Liberation, dan palet warna pearlescent Nika. Coba klik tombol "⚡ Gear 5" di header!
+            `
+        };
+
+        function appendMessage(sender, htmlText) {
+            const bubble = document.createElement('div');
+            bubble.className = `chat-bubble ${sender}`;
+            bubble.innerHTML = htmlText;
+            chatMessagesArea.appendChild(bubble);
+            chatMessagesArea.scrollTop = chatMessagesArea.scrollHeight;
+        }
+
+        function appendTypingIndicator() {
+            const indicator = document.createElement('div');
+            indicator.className = 'chat-bubble bot';
+            indicator.id = 'typingIndicatorBubble';
+            indicator.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
+            chatMessagesArea.appendChild(indicator);
+            chatMessagesArea.scrollTop = chatMessagesArea.scrollHeight;
+        }
+
+        function removeTypingIndicator() {
+            const indicator = document.getElementById('typingIndicatorBubble');
+            if (indicator) indicator.remove();
+        }
+
+        function processBotReply(userQuery) {
+            appendTypingIndicator();
+
+            setTimeout(() => {
+                removeTypingIndicator();
+                const q = userQuery.toLowerCase();
+
+                if (q.includes('keahlian') || q.includes('it') || q.includes('aslab') || q.includes('skill') || q.includes('lab') || q.includes('basis data') || q.includes('sql')) {
+                    appendMessage('bot', botKnowledge.skills);
+                } else if (q.includes('kerja') || q.includes('karir') || q.includes('qc') || q.includes('waki') || q.includes('shafa') || q.includes('kedai') || q.includes('customer service')) {
+                    appendMessage('bot', botKnowledge.career);
+                } else if (q.includes('organisasi') || q.includes('silat') || q.includes('pagar nusa') || q.includes('gmbu') || q.includes('pac') || q.includes('himsi') || q.includes('mapas')) {
+                    appendMessage('bot', botKnowledge.org);
+                } else if (q.includes('kontak') || q.includes('wa') || q.includes('whatsapp') || q.includes('telepon') || q.includes('hp') || q.includes('hubungi') || q.includes('kolaborasi')) {
+                    appendMessage('bot', botKnowledge.contact);
+                } else if (q.includes('luffy') || q.includes('gear 5') || q.includes('nika') || q.includes('awakening') || q.includes('one piece')) {
+                    appendMessage('bot', botKnowledge.gear5);
+                } else {
+                    appendMessage('bot', `
+                        Terima kasih atas pertanyaan Anda! Untuk informasi lebih spesifik mengenai:
+                        <br>1. <strong>Keahlian IT & Aslab</strong>
+                        <br>2. <strong>Pengalaman Kerja & Bisnis</strong>
+                        <br>3. <strong>Organisasi & Pencak Silat</strong>
+                        <br>4. <strong>Kontak Langsung</strong>
+                        <br>Silakan pilih menu cepat di bawah atau hubungi langsung via <a href="https://wa.me/62882010519801" target="_blank" style="color:#16a34a; font-weight:700;">WhatsApp</a>.
+                    `);
+                }
+            }, 600);
+        }
+
+        function sendQuickReply(text) {
+            appendMessage('user', text);
+            processBotReply(text);
+        }
+
+        function handleSendMessage() {
+            const text = chatTextInput.value.trim();
+            if (!text) return;
+
+            appendMessage('user', text);
+            chatTextInput.value = '';
+            processBotReply(text);
+        }
+
+        function handleChatKeyPress(e) {
+            if (e.key === 'Enter') {
+                handleSendMessage();
+            }
+        }
+    </script>
 
 </body>
 </html>
