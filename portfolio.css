@@ -817,56 +817,43 @@ body.gear5-mode .timeline-year {
 }
 
 /* --------------------------------------------------------------------------
-   10. CREDENTIALS & SKILLS
+   10. KOMPETENSI & KEAHLIAN (3 INTERACTIVE BENTO SKILL CLUSTERS)
    -------------------------------------------------------------------------- */
-.credential-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.credential-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    background-color: var(--bg-surface-elevated);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 14px 16px;
-}
-
-.cred-icon {
-    font-size: 18px;
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
-.cred-text h4 {
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 2px;
-}
-
-.cred-text p {
-    font-size: 12px;
-    color: var(--text-muted);
-}
-
-/* Skills Deck */
 .skills-grouped {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
+.skill-cluster-box {
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+    transition: all 0.3s var(--ease-rubber);
+}
+
+.skill-cluster-box:hover {
+    background-color: #ffffff;
+    border-color: var(--brand-blue);
+    box-shadow: var(--shadow-soft);
+}
+
+body.gear5-mode .skill-cluster-box:hover {
+    border-color: #a855f7;
+    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.15);
+}
+
 .skill-cluster-title {
-    font-size: 11.5px;
+    font-size: 13px;
     font-weight: 800;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
+    color: var(--brand-navy);
+    letter-spacing: -0.2px;
+    margin-bottom: 12px;
+}
+
+body.gear5-mode .skill-cluster-title {
+    color: #7e22ce;
 }
 
 .chips-wrap {
@@ -879,19 +866,22 @@ body.gear5-mode .timeline-year {
     font-size: 12px;
     font-weight: 600;
     color: var(--text-primary);
-    background-color: var(--bg-surface-elevated);
+    background-color: #ffffff;
     border: 1px solid var(--border-color);
     padding: 6px 13px;
     border-radius: var(--radius-md);
+    transition: all 0.25s var(--ease-rubber);
 }
 
 .skill-pill:hover {
-    background-color: #ffffff;
     border-color: var(--brand-blue);
+    color: var(--brand-blue);
+    transform: translateY(-2px);
 }
 
 body.gear5-mode .skill-pill:hover {
     border-color: #a855f7;
+    color: #9333ea;
     box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
 }
 
