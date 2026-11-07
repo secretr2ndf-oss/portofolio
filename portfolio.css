@@ -1,0 +1,2036 @@
+/* ==========================================================================
+   MUHAMAD RANDYFA AKBAR MAULANA - NEXT-GEN 2026 HYBRID PORTFOLIO
+   Theme: Professional High-Credibility + Monkey D. Luffy "Gear 5 (Sun God Nika)"
+   Author: Muhamad Randyfa Akbar Maulana
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESIGN SYSTEM VARIABLES (Default Professional Mode)
+   -------------------------------------------------------------------------- */
+:root {
+    --bg-base: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #f1f5f9;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --border-hover: #cbd5e1;
+
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --text-inverse: #ffffff;
+
+    --brand-navy: #1e3a8a;
+    --brand-blue: #2563eb;
+    --brand-blue-subtle: #eff6ff;
+    --brand-blue-glow: rgba(37, 99, 235, 0.25);
+    
+    --accent-emerald: #16a34a;
+    --accent-emerald-bg: #f0fdf4;
+    --accent-amber: #d97706;
+    --accent-amber-bg: #fffbeb;
+    --accent-purple: #7c3aed;
+
+    /* Toon / Rubber Physics Easing */
+    --ease-rubber: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    --shadow-soft: 0 4px 12px rgba(15, 23, 42, 0.05);
+    --shadow-hover: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
+    --shadow-pop: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+
+    --avatar-ring-color: #ffffff;
+    --avatar-ring-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   2. MONKEY D. LUFFY "GEAR 5 / SUN GOD NIKA" AWAKENING THEME
+   -------------------------------------------------------------------------- */
+body.gear5-mode {
+    --bg-base: #fdfbf7;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #faf5ff;
+    --bg-card: rgba(255, 255, 255, 0.94);
+    --border-color: #f3e8ff;
+    --border-hover: #c084fc;
+
+    --text-primary: #180928;
+    --text-secondary: #4c1d95;
+    --text-muted: #7c3aed;
+    --text-inverse: #ffffff;
+
+    --brand-navy: #6b21a8;
+    --brand-blue: #9333ea;
+    --brand-blue-subtle: #faf5ff;
+    --brand-blue-glow: rgba(168, 85, 247, 0.35);
+
+    --accent-emerald: #059669;
+    --accent-amber: #eab308;
+    
+    --shadow-soft: 0 8px 20px rgba(147, 51, 234, 0.08);
+    --shadow-hover: 0 16px 30px -4px rgba(147, 51, 234, 0.18), 0 0 15px rgba(250, 204, 21, 0.25);
+    --shadow-pop: 0 24px 38px -5px rgba(147, 51, 234, 0.25), 0 0 30px rgba(168, 85, 247, 0.2);
+
+    --avatar-ring-color: #ffffff;
+    --avatar-ring-shadow: 0 0 30px rgba(168, 85, 247, 0.5), 0 0 50px rgba(250, 204, 21, 0.35);
+}
+
+/* Gear 5 Background Atmosphere */
+body.gear5-mode::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(216, 180, 254, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(254, 240, 138, 0.25) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(243, 232, 255, 0.3) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+    animation: nikaAuraDrift 8s ease-in-out infinite alternate;
+}
+
+@keyframes nikaAuraDrift {
+    0% { transform: scale(1) translateY(0); filter: hue-rotate(0deg); }
+    100% { transform: scale(1.05) translateY(-10px); filter: hue-rotate(15deg); }
+}
+
+/* --------------------------------------------------------------------------
+   3. BASE RESET & TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-base);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding: 24px 16px 120px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.page-wrapper {
+    width: 100%;
+    max-width: 820px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Rubber / Toon Physics Interaction Class */
+.rubber-interact {
+    transition: transform 0.35s var(--ease-rubber), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.rubber-interact:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+.rubber-interact:active {
+    transform: translateY(2px) scale(0.97);
+}
+
+body.gear5-mode .rubber-interact:hover {
+    transform: translateY(-6px) scale(1.035) rotate(-0.5deg);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-hover);
+}
+
+body.gear5-mode .rubber-interact:active {
+    transform: translateY(2px) scale(0.95) rotate(1deg);
+}
+
+/* --------------------------------------------------------------------------
+   4. HEADER & PROFILE HERO
+   -------------------------------------------------------------------------- */
+.profile-hero {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 32px 28px 24px;
+    margin-bottom: 22px;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Manga Sound Effect Watermark (Gear 5 Only) */
+.manga-sound-fx {
+    display: none;
+    position: absolute;
+    font-size: 58px;
+    font-weight: 900;
+    font-style: italic;
+    color: rgba(147, 51, 234, 0.08);
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: -2px;
+    z-index: 0;
+}
+
+.manga-sound-fx.top-right {
+    top: 10px;
+    right: 20px;
+    transform: rotate(12deg);
+}
+
+.manga-sound-fx.bottom-left {
+    bottom: -10px;
+    left: 20px;
+    transform: rotate(-8deg);
+}
+
+body.gear5-mode .manga-sound-fx {
+    display: block;
+    animation: soundFxPulse 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes soundFxPulse {
+    0% { opacity: 0.06; transform: scale(1) rotate(12deg); }
+    100% { opacity: 0.14; transform: scale(1.08) rotate(15deg); }
+}
+
+.hero-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Drums of Liberation Status Pill */
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--accent-emerald-bg);
+    border: 1px solid #bbf7d0;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-emerald);
+    border-radius: var(--radius-full);
+}
+
+/* "Drums of Liberation" Heartbeat Rhythm on Dot */
+body.gear5-mode .status-pill {
+    background-color: #faf5ff;
+    border-color: #d8b4fe;
+}
+
+body.gear5-mode .status-dot {
+    background-color: #a855f7;
+    animation: drumsOfLiberation 1.15s infinite;
+}
+
+@keyframes drumsOfLiberation {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(168, 85, 247, 0); }
+    15% { transform: scale(1.4); box-shadow: 0 0 10px rgba(168, 85, 247, 0.8); }
+    30% { transform: scale(1); box-shadow: 0 0 0 rgba(168, 85, 247, 0); }
+    45% { transform: scale(1.3); box-shadow: 0 0 8px rgba(250, 204, 21, 0.8); }
+    60% { transform: scale(1); box-shadow: 0 0 0 rgba(168, 85, 247, 0); }
+}
+
+.status-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-emerald);
+}
+
+body.gear5-mode .status-text {
+    color: #7e22ce;
+}
+
+/* Awakening Mode Toggle Button */
+.awakening-toggle-btn,
+.gear5-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-primary);
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s var(--ease-rubber);
+}
+
+.awakening-toggle-btn:hover,
+.gear5-toggle-btn:hover {
+    border-color: #a855f7;
+    color: #7e22ce;
+    transform: scale(1.05);
+}
+
+body.gear5-mode .awakening-toggle-btn,
+body.gear5-mode .gear5-toggle-btn {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    border-color: #7e22ce;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.5);
+}
+
+.profile-main-layout,
+.profile-header-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 620px) {
+    .profile-main-layout,
+    .profile-header-main {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+    }
+}
+
+/* Avatar Wrapper with Nika Floating Cloud & Haki Sparks */
+.avatar-stage,
+.avatar-container {
+    position: relative;
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nika Cloud Scarf (Hagoromo) SVG Layer */
+.nika-cloud-ring {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.8) rotate(0deg);
+    transition: opacity 0.5s ease, transform 0.6s var(--ease-rubber);
+    z-index: 2;
+}
+
+body.gear5-mode .nika-cloud-ring,
+.avatar-stage:hover .nika-cloud-ring,
+.avatar-container:hover .nika-cloud-ring {
+    opacity: 1;
+    transform: scale(1.05) rotate(360deg);
+    animation: nikaCloudSpin 16s linear infinite;
+}
+
+@keyframes nikaCloudSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.profile-photo,
+.profile-avatar {
+    width: 124px;
+    height: 124px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    object-position: center 20%;
+    border: 3.5px solid var(--avatar-ring-color);
+    box-shadow: var(--avatar-ring-shadow);
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s var(--ease-rubber);
+}
+
+.avatar-stage:hover .profile-photo,
+.avatar-container:hover .profile-avatar {
+    transform: scale(1.06) rotate(-2deg);
+}
+
+/* Conqueror Haki Spark Elements */
+.haki-spark {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #facc15;
+    border-radius: 50%;
+    filter: blur(1px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+
+body.gear5-mode .haki-spark-1,
+body.gear5-mode .spark-1 {
+    top: 15px; right: 10px;
+    box-shadow: 0 0 12px #a855f7, 0 0 20px #facc15;
+    animation: sparkFlash 2s infinite 0.2s;
+}
+
+body.gear5-mode .haki-spark-2,
+body.gear5-mode .spark-2 {
+    bottom: 20px; left: 10px;
+    box-shadow: 0 0 12px #ec4899, 0 0 20px #facc15;
+    animation: sparkFlash 2.4s infinite 0.9s;
+}
+
+@keyframes sparkFlash {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.4); }
+}
+
+.profile-info,
+.profile-meta {
+    flex: 1;
+}
+
+.profile-title,
+.profile-name {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.4px;
+    line-height: 1.25;
+    margin-bottom: 6px;
+}
+
+body.gear5-mode .profile-title,
+body.gear5-mode .profile-name {
+    background: linear-gradient(135deg, #180928 20%, #7c3aed 70%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-headline,
+.profile-tagline {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--brand-navy);
+    margin-bottom: 4px;
+}
+
+.profile-campus,
+.profile-location {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Contact Strip */
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+    z-index: 1;
+}
+
+.action-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    padding: 8px 14px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.action-pill.primary-wa {
+    background-color: #16a34a;
+    border-color: #15803d;
+    color: #ffffff;
+}
+
+.action-pill.primary-wa:hover {
+    background-color: #15803d;
+    box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
+}
+
+.action-pill.copy-btn,
+.action-pill.phone-copy {
+    font-family: inherit;
+}
+
+.action-pill.icon-only {
+    padding: 8px 10px;
+}
+
+/* --------------------------------------------------------------------------
+   5. QUICK STATS (ANIMATED COUNTERS)
+   -------------------------------------------------------------------------- */
+.stats-grid-row,
+.quick-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+@media (min-width: 600px) {
+    .stats-grid-row,
+    .quick-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.stat-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 16px 14px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+}
+
+.stat-value {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--brand-navy);
+    letter-spacing: -0.3px;
+    margin-bottom: 2px;
+}
+
+body.gear5-mode .stat-value {
+    color: #9333ea;
+}
+
+.stat-label {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   6. FILTER TABS (All, Projects & IT, Career, Organization)
+   -------------------------------------------------------------------------- */
+.filter-tabs-bar {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    margin-bottom: 22px;
+    scrollbar-width: none;
+}
+
+.filter-tabs-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-btn {
+    flex-shrink: 0;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.25s var(--ease-rubber);
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--brand-blue);
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    background-color: var(--brand-navy);
+    border-color: var(--brand-navy);
+    color: #ffffff;
+    box-shadow: 0 4px 12px var(--brand-blue-glow);
+}
+
+body.gear5-mode .tab-btn.active {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    border-color: #6b21a8;
+    box-shadow: 0 4px 14px rgba(168, 85, 247, 0.45);
+}
+
+/* --------------------------------------------------------------------------
+   7. BENTO GRID & CONTENT CARDS
+   -------------------------------------------------------------------------- */
+.bento-container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.bento-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 26px;
+    box-shadow: var(--shadow-soft);
+}
+
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-kicker {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-blue);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+body.gear5-mode .card-kicker {
+    color: #9333ea;
+}
+
+.card-title {
+    font-size: 17.5px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.2px;
+}
+
+/* --------------------------------------------------------------------------
+   8. FEATURED PROJECTS (Clickable for Modal)
+   -------------------------------------------------------------------------- */
+.projects-deck {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.project-card {
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+}
+
+.project-card:hover {
+    background-color: #ffffff;
+    border-color: var(--brand-blue);
+}
+
+body.gear5-mode .project-card:hover {
+    border-color: #a855f7;
+    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.15);
+}
+
+.project-top-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.project-heading {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.project-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--brand-blue);
+    background-color: var(--brand-blue-subtle);
+    border: 1px solid #bfdbfe;
+    padding: 3px 9px;
+    border-radius: var(--radius-sm);
+}
+
+body.gear5-mode .project-badge {
+    color: #7e22ce;
+    background-color: #faf5ff;
+    border-color: #e9d5ff;
+}
+
+.project-snippet {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.click-hint {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--brand-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+body.gear5-mode .click-hint {
+    color: #9333ea;
+}
+
+/* --------------------------------------------------------------------------
+   9. INTERACTIVE JOURNEY TIMELINE (2018 - 2030)
+   -------------------------------------------------------------------------- */
+.timeline-wrapper {
+    position: relative;
+    padding-left: 28px;
+    margin-top: 10px;
+}
+
+/* Animated Progress Connector Line */
+.timeline-track-line {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 8px;
+    width: 3px;
+    background: #e2e8f0;
+    border-radius: var(--radius-full);
+}
+
+body.gear5-mode .timeline-track-line {
+    background: linear-gradient(to bottom, #d8b4fe, #facc15, #a855f7);
+}
+
+.timeline-entry {
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.timeline-entry:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline Glowing Node */
+.timeline-node-dot {
+    position: absolute;
+    left: -28px;
+    top: 6px;
+    width: 19px;
+    height: 19px;
+    background-color: #ffffff;
+    border: 3.5px solid var(--brand-blue);
+    border-radius: var(--radius-full);
+    box-shadow: 0 0 0 4px var(--brand-blue-subtle);
+    transition: all 0.3s var(--ease-rubber);
+    z-index: 1;
+}
+
+.timeline-entry.active-node .timeline-node-dot,
+.timeline-entry:hover .timeline-node-dot {
+    transform: scale(1.25);
+    background-color: var(--brand-blue);
+    border-color: #ffffff;
+    box-shadow: 0 0 14px var(--brand-blue-glow);
+}
+
+body.gear5-mode .timeline-node-dot {
+    border-color: #9333ea;
+    box-shadow: 0 0 0 4px #faf5ff;
+}
+
+body.gear5-mode .timeline-entry.active-node .timeline-node-dot {
+    background-color: #facc15;
+    border-color: #7e22ce;
+    box-shadow: 0 0 14px rgba(250, 204, 21, 0.8);
+    animation: drumsOfLiberation 1.15s infinite;
+}
+
+.timeline-content-card {
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+}
+
+.timeline-content-card:hover {
+    border-color: var(--brand-blue);
+    background-color: #ffffff;
+}
+
+body.gear5-mode .timeline-content-card:hover {
+    border-color: #a855f7;
+}
+
+.timeline-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.timeline-role {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.timeline-year {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 9px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    color: var(--brand-navy);
+}
+
+body.gear5-mode .timeline-year {
+    color: #7e22ce;
+    border-color: #d8b4fe;
+}
+
+.timeline-org {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.timeline-desc {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   10. KOMPETENSI & KEAHLIAN (3 INTERACTIVE BENTO SKILL CLUSTERS)
+   -------------------------------------------------------------------------- */
+.skills-grouped {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skill-cluster-box {
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+    transition: all 0.3s var(--ease-rubber);
+}
+
+.skill-cluster-box:hover {
+    background-color: #ffffff;
+    border-color: var(--brand-blue);
+    box-shadow: var(--shadow-soft);
+}
+
+body.gear5-mode .skill-cluster-box:hover {
+    border-color: #a855f7;
+    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.15);
+}
+
+.skill-cluster-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--brand-navy);
+    letter-spacing: -0.2px;
+    margin-bottom: 12px;
+}
+
+body.gear5-mode .skill-cluster-title {
+    color: #7e22ce;
+}
+
+.chips-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-pill {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 6px 13px;
+    border-radius: var(--radius-md);
+    transition: all 0.25s var(--ease-rubber);
+}
+
+.skill-pill:hover {
+    border-color: var(--brand-blue);
+    color: var(--brand-blue);
+    transform: translateY(-2px);
+}
+
+body.gear5-mode .skill-pill:hover {
+    border-color: #a855f7;
+    color: #9333ea;
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   11. PROJECT DETAILS MODAL
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-box {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    width: 100%;
+    max-width: 580px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 28px;
+    box-shadow: var(--shadow-pop);
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.4s var(--ease-rubber);
+    position: relative;
+}
+
+.modal-overlay.active .modal-box {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    background: #e2e8f0;
+    color: var(--text-primary);
+    transform: scale(1.1);
+}
+
+.modal-header {
+    margin-bottom: 16px;
+    padding-right: 40px;
+}
+
+.modal-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-blue);
+    background-color: var(--brand-blue-subtle);
+    padding: 3px 9px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.modal-body {
+
+    
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.modal-body p {
+    margin-bottom: 14px;
+}
+
+.modal-stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* --------------------------------------------------------------------------
+   12. SMART MINI CHATBOT WIDGET ("TANYA RANDYFA AI")
+   -------------------------------------------------------------------------- */
+.chatbot-trigger-btn {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    background: #0f172a;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 18px;
+    border-radius: var(--radius-full);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 800;
+    z-index: 990;
+    transition: all 0.3s var(--ease-rubber);
+}
+
+.chatbot-trigger-btn:hover {
+    transform: scale(1.06) translateY(-2px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.35);
+}
+
+body.gear5-mode .chatbot-trigger-btn {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.45);
+}
+
+.chat-avatar-mini {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+}
+
+.chat-unread-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    animation: pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+/* Chatbot Floating Window */
+.chatbot-card-window {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    width: 360px;
+    max-width: calc(100vw - 32px);
+    height: 520px;
+    max-height: calc(100vh - 120px);
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-pop);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 995;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.9) translateY(20px);
+    transition: all 0.35s var(--ease-rubber);
+}
+
+.chatbot-card-window.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0);
+}
+
+.chat-header {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body.gear5-mode .chat-header {
+    background: linear-gradient(135deg, #6b21a8, #9333ea);
+}
+
+.chat-header-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-header-name {
+    font-size: 13.5px;
+    font-weight: 800;
+}
+
+.chat-header-status {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.chat-close-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.chat-close-btn:hover {
+    opacity: 1;
+}
+
+/* Messages History Area */
+.chat-messages-area {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #f8fafc;
+}
+
+.chat-bubble {
+    max-width: 84%;
+    padding: 10px 14px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    border-radius: 16px;
+    animation: bubblePop 0.3s var(--ease-rubber);
+}
+
+@keyframes bubblePop {
+    from { opacity: 0; transform: scale(0.9) translateY(6px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.chat-bubble.bot {
+    align-self: flex-start;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-bottom-left-radius: 4px;
+}
+
+.chat-bubble.user {
+    align-self: flex-end;
+    background: var(--brand-navy);
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+}
+
+body.gear5-mode .chat-bubble.user {
+    background: #7e22ce;
+}
+
+/* Typing Indicator Animation */
+.typing-dots {
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px 8px;
+}
+
+.typing-dots span {
+    width: 6px;
+    height: 6px;
+    background: #94a3b8;
+    border-radius: 50%;
+    animation: typingBlink 1.4s infinite;
+}
+
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingBlink {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-4px); opacity: 1; }
+}
+
+/* Quick Replies Suggestions Bar */
+.chat-quick-replies {
+    padding: 8px 12px;
+    background: #ffffff;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.chat-quick-replies::-webkit-scrollbar {
+    display: none;
+}
+
+.chip-btn {
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 10px;
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    font-family: inherit;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+
+.chip-btn:hover {
+    background: var(--brand-blue-subtle);
+    border-color: var(--brand-blue);
+    color: var(--brand-blue);
+}
+
+/* Chat Input Bar */
+.chat-input-bar {
+    padding: 10px 14px;
+    background: #ffffff;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 8px;
+}
+
+.chat-text-input {
+    flex: 1;
+    font-family: inherit;
+    font-size: 12.5px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    outline: none;
+}
+
+.chat-text-input:focus {
+    border-color: var(--brand-blue);
+}
+
+.chat-send-btn {
+    width: 34px;
+    height: 34px;
+    background: var(--brand-navy);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.chat-send-btn:hover {
+    transform: scale(1.1);
+}
+
+body.gear5-mode .chat-send-btn {
+    background: #7e22ce;
+}
+
+/* --------------------------------------------------------------------------
+   13. FLOATING BOTTOM NAVIGATION DOCK
+   -------------------------------------------------------------------------- */
+.floating-dock-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-full);
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.35);
+    z-index: 980;
+}
+
+body.gear5-mode .floating-dock-nav {
+    background: rgba(30, 10, 50, 0.85);
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 12px 32px rgba(147, 51, 234, 0.4);
+}
+
+.dock-item {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: var(--radius-full);
+    transition: all 0.2s ease;
+}
+
+.dock-item:hover, .dock-item.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.dock-gear5-btn {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    color: #ffffff !important;
+    border-radius: var(--radius-full);
+    padding: 6px 12px;
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   14. TOAST NOTIFICATION
+   -------------------------------------------------------------------------- */
+.toast-msg {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-30px);
+    background: #0f172a;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: var(--radius-full);
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: var(--shadow-pop);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99999;
+    transition: all 0.3s var(--ease-rubber);
+}
+
+.toast-msg.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   14.5. SERTIFIKAT & KREDENSIAL DECK & CHATBOT STYLES
+   -------------------------------------------------------------------------- */
+.certs-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-top: 14px;
+}
+
+.cert-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s var(--ease-rubber), box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.cert-card:hover {
+    transform: translateY(-4px) scale(1.015);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--brand-blue);
+}
+
+body.gear5-mode .cert-card:hover {
+    border-color: #c084fc;
+    box-shadow: 0 12px 30px rgba(168, 85, 247, 0.25);
+}
+
+.cert-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.cert-badge {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cert-badge-pdf {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.cert-badge-img {
+    background-color: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+}
+
+.cert-badge-cloud {
+    background-color: #f5f3ff;
+    color: #7c3aed;
+    border: 1px solid #ddd6fe;
+}
+
+.cert-verified-pill {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #16a34a;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+}
+
+.cert-icon-preview {
+    background: var(--bg-surface-elevated);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.cert-svg-icon {
+    stroke: #dc2626;
+}
+
+.cert-svg-icon.cloud {
+    stroke: #7c3aed;
+}
+
+.cert-file-name {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+    word-break: break-all;
+}
+
+.cert-img-preview-box {
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 140px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.cert-card:hover .cert-thumbnail-img {
+    transform: scale(1.05);
+}
+
+.cert-heading {
+    font-size: 15.5px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.cert-snippet {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.cert-actions-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.cert-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: all 0.25s var(--ease-rubber);
+    flex: 1;
+    justify-content: center;
+}
+
+.cert-btn.primary {
+    background: var(--brand-navy);
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+.cert-btn.primary:hover {
+    background: var(--brand-blue);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.cert-btn.secondary {
+    background: var(--bg-surface-elevated);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.cert-btn.secondary:hover {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+.cert-btn.cloud {
+    background: #7c3aed;
+    color: #ffffff;
+    border: 1px solid transparent;
+    width: 100%;
+}
+
+.cert-btn.cloud:hover {
+    background: #6d28d9;
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+/* Chatbot Cert Bubble Styling */
+.chat-cert-card {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-top: 6px;
+}
+
+body.gear5-mode .chat-cert-card {
+    background: #faf5ff;
+    border-color: #e9d5ff;
+}
+
+.chat-cert-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.chat-cert-btn.primary {
+    background: #2563eb;
+    color: #ffffff !important;
+}
+
+.chat-cert-btn.primary:hover {
+    background: #1d4ed8;
+}
+
+.chat-cert-btn.secondary {
+    background: #e2e8f0;
+    color: #1e293b !important;
+}
+
+.chat-cert-btn.secondary:hover {
+    background: #cbd5e1;
+}
+
+.chat-cert-btn.cloud {
+    background: #7c3aed;
+    color: #ffffff !important;
+}
+
+.chat-cert-btn.cloud:hover {
+    background: #6d28d9;
+}
+
+/* --------------------------------------------------------------------------
+   14.5. SERTIFIKAT & KREDENSIAL DECK & CHATBOT STYLES
+   -------------------------------------------------------------------------- */
+.certs-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-top: 14px;
+}
+
+.cert-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s var(--ease-rubber), box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.cert-card:hover {
+    transform: translateY(-4px) scale(1.015);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--brand-blue);
+}
+
+body.gear5-mode .cert-card:hover {
+    border-color: #c084fc;
+    box-shadow: 0 12px 30px rgba(168, 85, 247, 0.25);
+}
+
+.cert-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.cert-badge {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cert-badge-pdf {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.cert-badge-img {
+    background-color: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+}
+
+.cert-badge-cloud {
+    background-color: #f5f3ff;
+    color: #7c3aed;
+    border: 1px solid #ddd6fe;
+}
+
+.cert-verified-pill {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #16a34a;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+}
+
+.cert-icon-preview {
+    background: var(--bg-surface-elevated);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.cert-svg-icon {
+    stroke: #dc2626;
+}
+
+.cert-svg-icon.cloud {
+    stroke: #7c3aed;
+}
+
+.cert-file-name {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+    word-break: break-all;
+}
+
+.cert-img-preview-box {
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 140px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.cert-card:hover .cert-thumbnail-img {
+    transform: scale(1.05);
+}
+
+.cert-heading {
+    font-size: 15.5px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.cert-snippet {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.cert-actions-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.cert-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: all 0.25s var(--ease-rubber);
+    flex: 1;
+    justify-content: center;
+}
+
+.cert-btn.primary {
+    background: var(--brand-navy);
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+.cert-btn.primary:hover {
+    background: var(--brand-blue);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.cert-btn.secondary {
+    background: var(--bg-surface-elevated);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.cert-btn.secondary:hover {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+.cert-btn.cloud {
+    background: #7c3aed;
+    color: #ffffff;
+    border: 1px solid transparent;
+    width: 100%;
+}
+
+.cert-btn.cloud:hover {
+    background: #6d28d9;
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+/* Chatbot Cert Bubble Styling */
+.chat-cert-card {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-top: 6px;
+}
+
+body.gear5-mode .chat-cert-card {
+    background: #faf5ff;
+    border-color: #e9d5ff;
+}
+
+.chat-cert-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.chat-cert-btn.primary {
+    background: #2563eb;
+    color: #ffffff !important;
+}
+
+.chat-cert-btn.primary:hover {
+    background: #1d4ed8;
+}
+
+.chat-cert-btn.secondary {
+    background: #e2e8f0;
+    color: #1e293b !important;
+}
+
+.chat-cert-btn.secondary:hover {
+    background: #cbd5e1;
+}
+
+.chat-cert-btn.cloud {
+    background: #7c3aed;
+    color: #ffffff !important;
+}
+
+.chat-cert-btn.cloud:hover {
+    background: #6d28d9;
+}
+
+/* --------------------------------------------------------------------------
+   15. PRINT STYLESHEET (CLEAN FORMAL RESUME)
+   -------------------------------------------------------------------------- */
+@media print {
+    body {
+        background-color: #ffffff !important;
+        padding: 0 !important;
+        color: #000000 !important;
+        overflow: visible !important;
+    }
+    .page-wrapper {
+        max-width: 100% !important;
+    }
+    .hero-top-bar,
+    .contact-actions,
+    .filter-tabs-bar,
+    .floating-dock-nav,
+    .chatbot-trigger-btn,
+    .chatbot-card-window,
+    .manga-sound-fx,
+    .nika-cloud-ring,
+    .haki-spark,
+    #projectModalOverlay,
+    #toastNotification,
+    body.gear5-mode::before,
+    .chat-quick-replies,
+    .chat-input-bar,
+    .modal-close-btn {
+        display: none !important;
+    }
+    .profile-hero, .bento-card, .timeline-content-card, #sertifikat, #certs {
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+}
+
+/* ==========================================================================
+   16. PATCH v2 — REFINEMENTS, ACCESSIBILITY & MOBILE ADAPTATION
+   ========================================================================== */
+
+/* Contrast Enhancement in Gear 5 Mode */
+body.gear5-mode {
+    --text-muted: #6b21a8;
+}
+
+/* Long Word Hyphenation & Overflow Wrapping */
+.profile-title,
+.profile-name,
+.profile-headline,
+.profile-tagline {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+/* Hero Top Bar Flex Wrap */
+.hero-top-bar {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Modal Close Button & Header Alignment (No overlap) */
+.modal-close-btn {
+    position: sticky;
+    top: 12px;
+    float: right;
+    margin: 0 0 12px 12px;
+    z-index: 2;
+}
+
+.modal-header {
+    clear: both;
+}
+
+/* Body Modal Open Class */
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Fallback for Browsers Without Backdrop-Filter Support */
+@supports not (backdrop-filter: blur(1px)) {
+    .floating-dock-nav,
+    .chatbot-card-window,
+    .modal-overlay,
+    .status-pill,
+    .awakening-toggle-btn,
+    .gear5-toggle-btn {
+        background-color: var(--bg-card) !important;
+    }
+}
+
+/* Reduced Motion User Preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Ultra-Compact Mobile Screen Optimization (<= 420px) */
+@media (max-width: 420px) {
+    .floating-dock-nav {
+        gap: 4px;
+        padding: 6px 8px;
+        max-width: calc(100vw - 16px);
+    }
+    .dock-item {
+        padding: 5px 7px;
+    }
+    .dock-item svg {
+        width: 14px;
+        height: 14px;
+    }
+    .dock-label {
+        display: none;
+    }
+    .dock-gear5-btn {
+        padding: 5px 8px;
+    }
+    .dock-gear5-btn span {
+        font-size: 0;
+    }
+    .dock-gear5-btn span::before {
+        content: "⚡";
+        font-size: 14px;
+    }
+    .chatbot-card-window {
+        right: 12px;
+        left: 12px;
+        width: auto;
+        bottom: 80px;
+    }
+}
