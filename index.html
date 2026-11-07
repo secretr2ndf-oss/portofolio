@@ -296,7 +296,7 @@
                                 <span class="timeline-year">2023 – 2024</span>
                             </div>
                             <p class="timeline-org">Garda Muda Bibit Unggul (GMBU) Kota Surabaya, CV. Shafa Multimedia & Unit Usaha Mandiri</p>
-                            <p class="timeline-desc">Aktif dalam 2 periode kepengurusan Garda Muda Bibit Unggul (GMBU) Kota Surabaya. Bekerja sebagai Quality Control (QC) percetakan di CV. Shafa Multimedia serta mengelola manajemen operasional dan arus kas unit usaha mandiri.</p>
+                            <p class="timeline-desc">Aktif dalam 2 periode kepengurusan Garda Muda Bibit Unggul (GMBU) Kota Surabaya. Bekerja sebagai Quality Control (QC) percetakan di CV. Shafa Multimedia serta mengelola manajemen operasional dan arus kas unit usaha mandiri. Dipercaya menjadi <strong>Master of Ceremony (MC)</strong> pada program kerja internal GMBU yang diselenggarakan di <strong>DPRD Kota Surabaya</strong>, memimpin jalannya acara formal dan memastikan protokoler berjalan lancar.</p>
                         </div>
                     </div>
 
@@ -840,7 +840,7 @@
             org: `
                 🏆 <strong>Organisasi & Kepemimpinan:</strong><br>
                 • <strong>Pencak Silat Pagar Nusa:</strong> Anggota aktif sejak 2018 (7+ tahun) dan memegang amanah sebagai <strong>Sekretaris PAC masa bakti 2025–2030</strong>.
-                <br>• <strong>Garda Muda Bibit Unggul (GMBU) Kota Surabaya:</strong> Pengurus aktif selama 2 periode (2023 & 2024).
+                <br>• <strong>Garda Muda Bibit Unggul (GMBU) Kota Surabaya:</strong> Pengurus aktif selama 2 periode (2023 & 2024). Dipercaya menjadi <strong>Master of Ceremony (MC)</strong> pada program kerja internal GMBU di <strong>DPRD Kota Surabaya</strong>.
                 <br>• Anggota aktif di <strong>HIMSI ITATS</strong> dan <strong>MAPAS INDONESIA</strong>.
             `,
             contact: `
@@ -930,7 +930,7 @@
                 if (/\b(kerja|karir|qc|waki|shafa|operasional|usaha)\b/i.test(q) || /\b(customer\s+service)\b/i.test(q)) {
                     matches.push(botKnowledge.career);
                 }
-                if (/\b(organisasi|silat|gmbu|pac|himsi|mapas)\b/i.test(q) || /\b(pagar\s+nusa|garda\s+muda)\b/i.test(q)) {
+                if (/\b(organisasi|silat|gmbu|pac|himsi|mapas|mc|dprd)\b/i.test(q) || /\b(pagar\s+nusa|garda\s+muda|master\s+of\s+ceremony)\b/i.test(q)) {
                     matches.push(botKnowledge.org);
                 }
                 if (/\b(kontak|wa|whatsapp|telepon|hp|hubungi|email|kolaborasi)\b/i.test(q)) {
