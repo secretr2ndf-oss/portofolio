@@ -274,6 +274,19 @@
                         </div>
                     </div>
 
+                    <!-- Milestone: IT Support PT. DLU -->
+                    <div class="timeline-entry active-node">
+                        <div class="timeline-node-dot"></div>
+                        <div class="timeline-content-card rubber-interact">
+                            <div class="timeline-header-row">
+                                <h3 class="timeline-role">IT Support — Event Technology & Reses DPR RI</h3>
+                                <span class="timeline-year">[TAHUN] – [TAHUN]</span>
+                            </div>
+                            <p class="timeline-org">PT. DLU (di bawah Manajer IT) — Mengawal Kegiatan Reses Bapak Bambang Haryo Soekartono (DPR RI Komisi VII) di Surabaya & Sidoarjo</p>
+                            <p class="timeline-desc">Bergabung dengan tim IT PT. DLU di bawah supervisi langsung Manajer IT. Ditugaskan khusus mengawal kebutuhan teknologi kegiatan reses Bapak Bambang Haryo Soekartono (Anggota DPR RI Komisi VII) di wilayah Surabaya dan Sidoarjo. Bertanggung jawab atas kesiapan sound system, layar presentasi, dan troubleshooting teknis selama acara—memastikan zero downtime di setiap lokasi.</p>
+                        </div>
+                    </div>
+
                     <!-- Milestone 3: 2023 - 2024 -->
                     <div class="timeline-entry">
                         <div class="timeline-node-dot"></div>
@@ -494,6 +507,7 @@
         <div class="chat-quick-replies">
             <button class="chip-btn" onclick="sendQuickReply('📜 Sertifikat & Kredensial?')">📜 Sertifikat & Kredensial?</button>
             <button class="chip-btn" onclick="sendQuickReply('💻 Keahlian IT & Aslab?')">💻 Keahlian IT & Aslab?</button>
+            <button class="chip-btn" onclick="sendQuickReply('💼 IT Support PT. DLU & DPR?')">💼 IT Support PT. DLU & DPR?</button>
             <button class="chip-btn" onclick="sendQuickReply('💼 Pengalaman Kerja?')">💼 Pengalaman Kerja?</button>
             <button class="chip-btn" onclick="sendQuickReply('🏆 Organisasi & Silat?')">🏆 Organisasi & Silat?</button>
             <button class="chip-btn" onclick="sendQuickReply('📞 Kontak & Kolaborasi?')">📞 Kontak & Kolaborasi?</button>
@@ -813,6 +827,16 @@
                 <br>• <strong>Customer Service</strong> di <em>WAKi International Group</em> (2022–2023): Pelayanan pelanggan berstandar internasional dan mediasi solutif.
                 <br>• <strong>Manajemen Operasional Unit Usaha Mandiri</strong> (2023–2024): Mengelola manajemen operasional, persediaan logistik, dan tata kelola arus kas keuangan harian.
             `,
+            dlu: `
+                💼 <strong>Pengalaman IT Support PT. DLU & Reses DPR RI:</strong><br>
+                Randyfa bergabung dengan tim IT <strong>PT. DLU</strong> di bawah supervisi langsung <strong>Manajer IT</strong>. Ditugaskan khusus mengawal kebutuhan teknologi kegiatan reses <strong>Bapak Bambang Haryo Soekartono</strong> (Anggota DPR RI Komisi VII) di wilayah <strong>Surabaya dan Sidoarjo</strong>. Jobdesc meliputi:
+                <br>• Menyiapkan dan mengecek kelengkapan teknis (sound system & layar presentasi) sebelum acara.
+                <br>• Menguji sound system dan tampilan visual presentasi.
+                <br>• Standby troubleshooting selama acara berlangsung.
+                <br>• Memastikan presentasi berjalan tanpa hambatan teknis (zero downtime) di setiap lokasi.
+                <br><br>
+                Pengalaman ini menunjukkan kemampuan bekerja di struktur profesional dengan supervisi langsung, adaptasi multi-lokasi, dan pressure handling di lingkungan formal bersama pejabat publik.
+            `,
             org: `
                 🏆 <strong>Organisasi & Kepemimpinan:</strong><br>
                 • <strong>Pencak Silat Pagar Nusa:</strong> Anggota aktif sejak 2018 (7+ tahun) dan memegang amanah sebagai <strong>Sekretaris PAC masa bakti 2025–2030</strong>.
@@ -899,6 +923,9 @@
                 }
                 if (/\b(keahlian|it|aslab|skill|skills|lab|sql)\b/i.test(q) || /\b(basis\s+data)\b/i.test(q)) {
                     matches.push(botKnowledge.skills);
+                }
+                if (/\b(dlu|dpr|reses|bambang\s+haryo|event\s+tech|it\s+support|sound\s+system|sidoarjo)\b/i.test(q)) {
+                    matches.push(botKnowledge.dlu);
                 }
                 if (/\b(kerja|karir|qc|waki|shafa|operasional|usaha)\b/i.test(q) || /\b(customer\s+service)\b/i.test(q)) {
                     matches.push(botKnowledge.career);
