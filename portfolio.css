@@ -772,14 +772,17 @@ body.gear5-mode .timeline-track-line {
 }
 
 body.gear5-mode .timeline-node-dot {
-    border-color: #9333ea;
-    box-shadow: 0 0 0 4px #faf5ff;
-}
-
-body.gear5-mode .timeline-entry.active-node .timeline-node-dot {
     background-color: #facc15;
     border-color: #7e22ce;
-    box-shadow: 0 0 14px rgba(250, 204, 21, 0.8);
+    box-shadow: 0 0 14px rgba(250, 204, 21, 0.85);
+    animation: drumsOfLiberation 1.15s infinite;
+}
+
+body.gear5-mode .timeline-entry.active-node .timeline-node-dot,
+body.gear5-mode .timeline-entry:hover .timeline-node-dot {
+    background-color: #facc15;
+    border-color: #6b21a8;
+    box-shadow: 0 0 18px rgba(250, 204, 21, 0.95);
     animation: drumsOfLiberation 1.15s infinite;
 }
 
