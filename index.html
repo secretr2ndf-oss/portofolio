@@ -180,8 +180,8 @@
                 <span class="stat-label">Lab SI ITATS</span>
             </div>
             <div class="stat-box rubber-interact">
-                <span class="stat-value">3+ Bidang</span>
-                <span class="stat-label">Karir & Operasional</span>
+                <span class="stat-value">6 Tahun</span>
+                <span class="stat-label">Santri Darul 'Ulum</span>
             </div>
         </section>
 
@@ -323,6 +323,19 @@
                             </div>
                             <p class="timeline-org">Pencak Silat Pagar Nusa Indonesia</p>
                             <p class="timeline-desc">Menempa ketahanan fisik, mentalitas kepemimpinan, kedisiplinan seni bela diri tradisional, serta nilai-nilai kekeluargaan dan dedikasi pengabdian masyarakat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 6: Pendidikan Pesantren Darul 'Ulum -->
+                    <div class="timeline-entry">
+                        <div class="timeline-node-dot"></div>
+                        <div class="timeline-content-card rubber-interact">
+                            <div class="timeline-header-row">
+                                <h3 class="timeline-role">Pendidikan Karakter & Keilmuan Pesantren (6 Tahun)</h3>
+                                <span class="timeline-year">Mondok 6 Tahun</span>
+                            </div>
+                            <p class="timeline-org">Pondok Pesantren Darul 'Ulum (Rejoso, Peterongan, Jombang)</p>
+                            <p class="timeline-desc">Menempuh masa studi dan pendidikan selama 6 tahun di Pondok Pesantren Darul 'Ulum Jombang. Memperdalam pemahaman ilmu agama, pembentukan akhlak karimah, kemandirian hidup berasrama, kedisiplinan, serta menanamkan prinsip integritas dan niat tulus agar setiap ikhtiar senantiasa bermanfaat bagi sesama.</p>
                         </div>
                     </div>
                 </div>
@@ -504,6 +517,27 @@
                 </div>
             </section>
 
+            <!-- 05 / KALAM MUTIARA & PRINSIP HIDUP -->
+            <section class="bento-card quote-card rubber-interact" id="kalam">
+                <div class="card-header-row">
+                    <span class="card-kicker">PRINSIP & NILAI KEHIDUPAN</span>
+                    <span class="quote-kicker-badge">Kalam Hikmah</span>
+                </div>
+                <div class="quote-container">
+                    <div class="quote-mark-icon" aria-hidden="true">&ldquo;</div>
+                    <blockquote class="kalam-quote-text">
+                        &ldquo;Banyak orang gagal menjadi orang kaya, karena dari niatnya memang tidak akan bermanfaat bagi sesama. Saya sering berpesan ketika bekerja harus punya niat tulus yang menimbulkan manfaat bagi dirinya sendiri dan orang banyak. Bekerja apa saja, asal bermanfaat. Hasilnya pasti berbeda.&rdquo;
+                    </blockquote>
+                    <div class="quote-author-box">
+                        <span class="quote-ornament">🌿</span>
+                        <div>
+                            <cite class="quote-author-name">Kalam dari KH. Zainul Ibad As'ad</cite>
+                            <span class="quote-author-desc">Pengasuh Pondok Pesantren Darul 'Ulum (Rejoso, Peterongan, Jombang)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
 
         <!-- FOOTER CALL TO ACTION -->
@@ -579,6 +613,7 @@
 
         <!-- Quick Reply Suggestion Chips -->
         <div class="chat-quick-replies">
+            <button class="chip-btn" onclick="sendQuickReply('🕌 Ponpes Darul \'Ulum & Kalam?')">🕌 Ponpes Darul 'Ulum & Kalam?</button>
             <button class="chip-btn" onclick="sendQuickReply('📜 Sertifikat & Kredensial?')">📜 Sertifikat & Kredensial?</button>
             <button class="chip-btn" onclick="sendQuickReply('💻 Keahlian IT & Aslab?')">💻 Keahlian IT & Aslab?</button>
             <button class="chip-btn" onclick="sendQuickReply('💼 IT Support PT. DLU & DPR?')">💼 IT Support PT. DLU & DPR?</button>
@@ -955,6 +990,13 @@
                     <div style="font-size:11px; color:var(--text-muted); margin-bottom:6px;">Kredensial Digital Terverifikasi</div>
                     <a href="https://drive.google.com/file/d/1elf-9Y2x-Q_j2KSNGa8Kxf-KFCNWMnui/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="chat-cert-btn cloud">☁️ Akses Google Drive</a>
                 </div>
+            `,
+            pesantren: `
+                🕌 <strong>Pendidikan Pondok Pesantren Darul 'Ulum Jombang:</strong><br>
+                Randyfa menempuh pendidikan selama <strong>6 tahun</strong> di <strong>Pondok Pesantren Darul 'Ulum (Rejoso, Peterongan, Jombang)</strong>. Masa studi ini menjadi pondasi pembentukan adab, kemandirian berasrama, kedisiplinan, serta integritas moral.<br><br>
+                💡 <strong>Kalam Mutiara Pedoman:</strong><br>
+                <em>"Banyak orang gagal menjadi orang kaya, karena dari niatnya memang tidak akan bermanfaat bagi sesama. Saya sering berpesan ketika bekerja harus punya niat tulus yang menimbulkan manfaat bagi dirinya sendiri dan orang banyak. Bekerja apa saja, asal bermanfaat. Hasilnya pasti berbeda."</em><br>
+                — <strong>Kalam dari KH. Zainul Ibad As'ad</strong>
             `
         };
 
@@ -994,6 +1036,9 @@
 
                 const matches = [];
 
+                if (/\b(pesantren|pondok|darul\s+ulum|jombang|santri|kalam|mutiara|zainul\s+ibad|ibad|pendidikan)\b/i.test(q)) {
+                    matches.push(botKnowledge.pesantren);
+                }
                 if (/\b(sertifikat|sertif|kredensial|piagam|ijazah|lisensi|certificate|bnsp|coursera)\b/i.test(q)) {
                     matches.push(botKnowledge.certs);
                 }
