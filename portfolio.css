@@ -2039,11 +2039,18 @@ body.modal-open {
     }
 }
 
-/* Skill List dengan Deskripsi */
+/* === SKILLS GRID 2 KOLOM === */
 .skill-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 kolom */
+    gap: 12px;
+}
+
+@media (min-width: 640px) {
+    .skill-list {
+        grid-template-columns: repeat(2, 1fr); /* Tablet/desktop: 2 kolom */
+        gap: 14px;
+    }
 }
 
 .skill-item {
@@ -2052,11 +2059,15 @@ body.modal-open {
     border-radius: var(--radius-md);
     padding: 14px 16px;
     transition: all 0.25s var(--ease-rubber);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .skill-item:hover {
     border-color: var(--brand-blue);
     box-shadow: var(--shadow-soft);
+    transform: translateY(-2px);
 }
 
 body.gear5-mode .skill-item {
@@ -2071,6 +2082,7 @@ body.gear5-mode .skill-item:hover {
     display: inline-block;
     margin-bottom: 8px;
     font-weight: 800;
+    align-self: flex-start;
 }
 
 .skill-desc {
@@ -2078,6 +2090,7 @@ body.gear5-mode .skill-item:hover {
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 6px;
+    flex-grow: 1;
 }
 
 .skill-proof {
@@ -2085,6 +2098,7 @@ body.gear5-mode .skill-item:hover {
     color: var(--text-muted);
     line-height: 1.55;
     font-style: italic;
+    margin-top: auto;
 }
 
 .skill-proof strong {
@@ -2096,13 +2110,20 @@ body.gear5-mode .skill-proof strong {
     color: #7e22ce;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 639px) {
     .skill-item { padding: 12px 14px; }
     .skill-desc, .skill-proof { font-size: 11.5px; }
 }
 
 @media print {
-    .skill-item { border: 1px solid #cbd5e1 !important; box-shadow: none !important; }
+    .skill-list { display: block; }
+    .skill-item {
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        transform: none !important;
+        margin-bottom: 10px;
+        break-inside: avoid;
+    }
 }
 
 /* --------------------------------------------------------------------------
